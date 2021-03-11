@@ -1,0 +1,14 @@
+if ! (playerprefs->ftue played)
+    Camera Shake
+    Iceberg starts to sink downwards
+    Water starts to rise up, and scale up
+    Snow falls from sky, something hits the penguin
+    Penguin "dies" and has "dizzy effect" activated
+    start view fades into view
+    when player presses play button -> player gets "healed" and awakes again
+    Dialog appears "Why can't I remember how to swim?"
+    When pressed it changes -> "I need to get away from this water. FAST!"
+    when pressed again it changes -> joystick
+    (playerprefs->ftue played) set to TRUE
+
+Water starts to rise

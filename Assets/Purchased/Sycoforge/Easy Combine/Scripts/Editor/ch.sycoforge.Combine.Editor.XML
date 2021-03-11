@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ch.sycoforge.Combine.Editor</name>
+    </assembly>
+    <members>
+        <member name="P:ch.sycoforge.Combine.Editor.EditorSettings.RoundTransformation">
+            <summary>
+            Pre-process. Round all transformations before combining.
+            </summary>
+        </member>
+        <member name="P:ch.sycoforge.Combine.Editor.EditorSettings.MarkAsStatic">
+            <summary>
+            Post-process. Mark the combined mesh as static.
+            </summary>
+        </member>
+        <member name="P:ch.sycoforge.Combine.Editor.EditorSettings.DeleteAssetOnRevert">
+            <summary>
+            Gets or sets a value indicating whether a linked mesh asset should be deleted when reverting a combined group.
+            </summary>
+        </member>
+        <member name="P:ch.sycoforge.Combine.Editor.EditorSettings.Optimize">
+            <summary>
+            Gets or sets a value indicating whether the combined mesh should be optimized after combining.
+            </summary>
+        </member>
+        <member name="P:ch.sycoforge.Combine.Editor.EditorSettings.RecalculateNormals">
+            <summary>
+            Gets or sets a value indicating whether the normals of the combined mesh should be recalculated after combining.
+            </summary>
+        </member>
+        <member name="P:ch.sycoforge.Combine.Editor.EditorSettings.TranformToParentSpace">
+            <summary>
+            Gets or sets a value indicating whether the mesh should be transformed back to the parents space.
+            Note: This is only possible when there's only one common parent object.
+            </summary>
+        </member>
+    </members>
+</doc>
