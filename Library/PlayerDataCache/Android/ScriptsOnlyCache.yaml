@@ -26,9 +26,12 @@ ScriptsOnlyBuild:
     - StudioByStorm.Scripts.Level
     - StudioByStorm.Scripts.LevelController
     - StudioByStorm.Scripts.LevelPool
+    - StudioByStorm.Scripts.ParticlePool
     - StudioByStorm.Scripts.PlayerController
     - StudioByStorm.Scripts.WolfEnemy
     - UserInterfaceController
+    CFXRRuntime.dll:
+    - CartoonFX.CFXR_Effect
     LeanGUI.dll:
     - Lean.Gui.LeanButton
     - Lean.Gui.LeanHitbox
@@ -84,10 +87,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -164,163 +165,167 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11584}
-    - Class: 114
-      Script: {instanceID: 11588}
-    - Class: 114
-      Script: {instanceID: 11592}
-    - Class: 114
-      Script: {instanceID: 11594}
-    - Class: 114
-      Script: {instanceID: 11596}
-    - Class: 114
       Script: {instanceID: 11598}
-    - Class: 114
-      Script: {instanceID: 11600}
     - Class: 114
       Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 11604}
-    - Class: 114
       Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11612}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11616}
+    - Class: 114
+      Script: {instanceID: 11618}
+    - Class: 114
+      Script: {instanceID: 11620}
+    - Class: 114
+      Script: {instanceID: 11746}
+    - Class: 114
+      Script: {instanceID: 11752}
     - Class: 114
       Script: {instanceID: 11794}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11964}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12220}
+      Script: {instanceID: 11994}
     - Class: 114
-      Script: {instanceID: 12264}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12418}
+      Script: {instanceID: 12300}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 12504}
+      Script: {instanceID: 12480}
     - Class: 114
-      Script: {instanceID: 12802}
+      Script: {instanceID: 12542}
     - Class: 114
-      Script: {instanceID: 12858}
+      Script: {instanceID: 12848}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13066}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 13076}
+      Script: {instanceID: 13118}
     - Class: 114
-      Script: {instanceID: 13154}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 13206}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 13470}
+      Script: {instanceID: 13488}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13522}
     - Class: 114
-      Script: {instanceID: 13528}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13542}
+      Script: {instanceID: 13582}
     - Class: 114
-      Script: {instanceID: 13598}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 13624}
+      Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 13680}
     - Class: 114
-      Script: {instanceID: 13766}
+      Script: {instanceID: 13800}
     - Class: 114
-      Script: {instanceID: 13780}
+      Script: {instanceID: 13826}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13840}
     - Class: 114
-      Script: {instanceID: 13892}
+      Script: {instanceID: 13896}
     - Class: 114
-      Script: {instanceID: 13934}
+      Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 14128}
+      Script: {instanceID: 13996}
     - Class: 114
-      Script: {instanceID: 14144}
+      Script: {instanceID: 14192}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14208}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14338}
     - Class: 114
-      Script: {instanceID: 14534}
+      Script: {instanceID: 14350}
     - Class: 114
-      Script: {instanceID: 14614}
+      Script: {instanceID: 14482}
     - Class: 114
-      Script: {instanceID: 14618}
+      Script: {instanceID: 14604}
     - Class: 114
-      Script: {instanceID: 14636}
+      Script: {instanceID: 14686}
     - Class: 114
-      Script: {instanceID: 14644}
+      Script: {instanceID: 14690}
     - Class: 114
-      Script: {instanceID: 14778}
+      Script: {instanceID: 14708}
     - Class: 114
-      Script: {instanceID: 14794}
+      Script: {instanceID: 14716}
     - Class: 114
-      Script: {instanceID: 14802}
+      Script: {instanceID: 14850}
     - Class: 114
-      Script: {instanceID: 14836}
+      Script: {instanceID: 14866}
     - Class: 114
-      Script: {instanceID: 14844}
+      Script: {instanceID: 14874}
+    - Class: 114
+      Script: {instanceID: 14908}
     - Class: 114
       Script: {instanceID: 14916}
     - Class: 114
-      Script: {instanceID: 15048}
+      Script: {instanceID: 14944}
     - Class: 114
-      Script: {instanceID: 15202}
+      Script: {instanceID: 14990}
     - Class: 114
-      Script: {instanceID: 15234}
+      Script: {instanceID: 15124}
     - Class: 114
-      Script: {instanceID: 15260}
+      Script: {instanceID: 15278}
     - Class: 114
-      Script: {instanceID: 15284}
+      Script: {instanceID: 15310}
     - Class: 114
-      Script: {instanceID: 15342}
+      Script: {instanceID: 15336}
     - Class: 114
-      Script: {instanceID: 15518}
+      Script: {instanceID: 15360}
     - Class: 114
-      Script: {instanceID: 15626}
+      Script: {instanceID: 15418}
     - Class: 114
-      Script: {instanceID: 15664}
+      Script: {instanceID: 15598}
     - Class: 114
-      Script: {instanceID: 15684}
+      Script: {instanceID: 15706}
     - Class: 114
-      Script: {instanceID: 15834}
+      Script: {instanceID: 15744}
     - Class: 114
-      Script: {instanceID: 15838}
+      Script: {instanceID: 15764}
     - Class: 114
-      Script: {instanceID: 15890}
+      Script: {instanceID: 15916}
     - Class: 114
-      Script: {instanceID: 15934}
+      Script: {instanceID: 15920}
     - Class: 114
-      Script: {instanceID: 16146}
+      Script: {instanceID: 15972}
     - Class: 114
-      Script: {instanceID: 16148}
+      Script: {instanceID: 16018}
     - Class: 114
-      Script: {instanceID: 16188}
+      Script: {instanceID: 16234}
     - Class: 114
-      Script: {instanceID: 16216}
+      Script: {instanceID: 16236}
     - Class: 114
-      Script: {instanceID: 16346}
+      Script: {instanceID: 16276}
     - Class: 114
-      Script: {instanceID: 16352}
+      Script: {instanceID: 16306}
+    - Class: 114
+      Script: {instanceID: 16438}
+    - Class: 114
+      Script: {instanceID: 16444}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -426,6 +431,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 723614de6aa8ab77c2d95f1e7d3c733b
+    assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
+    namespaceName: UnityEngine.Rendering.Universal
+    className: UniversalRenderPipelineAsset
+  - hash:
+      serializedVersion: 2
       Hash: a1f19ad47d3094e235f21b74dfc423a8
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -460,6 +471,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 671420ad2c33f1ddaf6d076461adf15a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_Translate
   - hash:
       serializedVersion: 2
       Hash: 42bdfa9c19fa0e22d271f8494a697258
@@ -828,6 +845,12 @@ ScriptsOnlyBuild:
     className: LeanGraphicColor
   - hash:
       serializedVersion: 2
+      Hash: 694ed4ff5668105a3183631c03b38306
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo
+  - hash:
+      serializedVersion: 2
       Hash: 49373f498f8b556728dad21083e07b73
     assemblyName: MoreMountains.NiceVibrations.Demos.dll
     namespaceName: MoreMountains.NiceVibrations
@@ -942,6 +965,12 @@ ScriptsOnlyBuild:
     className: MMNVRumbleWaveFormAsset
   - hash:
       serializedVersion: 2
+      Hash: fa3e4585868a251c4fc15b64875ea790
+    assemblyName: CFXRRuntime.dll
+    namespaceName: CartoonFX
+    className: CFXR_ParticleText
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1006,6 +1035,12 @@ ScriptsOnlyBuild:
     assemblyName: Dypsloom.Shared.Utility.dll
     namespaceName: Dypsloom.Shared.Utility
     className: PoolManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1d0beb1a2d4edee4c06b6835632e83a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_AutoStopLoopedEffect
   - hash:
       serializedVersion: 2
       Hash: 486195f510194d1eed238667a698b978
@@ -1116,6 +1151,12 @@ ScriptsOnlyBuild:
     className: LeanInsert
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_ShurikenThreadFix
+  - hash:
+      serializedVersion: 2
       Hash: 949a5890ce572ec240178521254b72e1
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -1150,6 +1191,12 @@ ScriptsOnlyBuild:
     assemblyName: LeanGUI.dll
     namespaceName: Lean.Gui
     className: LeanToggle
+  - hash:
+      serializedVersion: 2
+      Hash: b10f0f008d787b95a5928eed8ceaa36e
+    assemblyName: CFXRDemo.dll
+    namespaceName: Kino
+    className: Bloom
   - hash:
       serializedVersion: 2
       Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
@@ -1344,10 +1391,10 @@ ScriptsOnlyBuild:
     className: ItemHotbarSlotBox
   - hash:
       serializedVersion: 2
-      Hash: 723614de6aa8ab77c2d95f1e7d3c733b
-    assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
-    namespaceName: UnityEngine.Rendering.Universal
-    className: UniversalRenderPipelineAsset
+      Hash: 0ae5606b0dc4ebd5d000e916ec862577
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_InspectorHelp
   - hash:
       serializedVersion: 2
       Hash: 0574135745ea880aa1c1be2f2057ab89
@@ -1404,6 +1451,12 @@ ScriptsOnlyBuild:
     className: AxisTouchButton
   - hash:
       serializedVersion: 2
+      Hash: 4aac268d7e435f7a65add91aaba819a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_RandomDir
+  - hash:
+      serializedVersion: 2
       Hash: 64a2c6290be43dffb9b123cd81804930
     assemblyName: MoreMountains.NiceVibrations.Demos.dll
     namespaceName: MoreMountains.NiceVibrations
@@ -1452,6 +1505,12 @@ ScriptsOnlyBuild:
     className: ParticlePivot
   - hash:
       serializedVersion: 2
+      Hash: f98b07cf919b54e1cbdc75109809c5b5
+    assemblyName: CFXRDemo.dll
+    namespaceName: CartoonFX
+    className: CFXR_Demo
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1464,7 +1523,7 @@ ScriptsOnlyBuild:
     className: LeanCanvasGroupInteractable
   - hash:
       serializedVersion: 2
-      Hash: 5f4779778b1ed5280785e98cd42c85dc
+      Hash: aa38ec3f8c0bf7fd2ced9a0ebb1f340c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioController
@@ -1474,6 +1533,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineTriggerAction
+  - hash:
+      serializedVersion: 2
+      Hash: 3f5031037e63abe5dcf87c278e01a4de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_RotateCamera
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1531,6 +1596,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_AutodestructWhenNoChildren
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: 
     className: ForcedReset
@@ -1570,6 +1641,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineDollyCart
+  - hash:
+      serializedVersion: 2
+      Hash: 5d27c6e85ec89cfab8577e9e26695e88
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_AutoDestructShuriken
   - hash:
       serializedVersion: 2
       Hash: c637dae2e100893982ce97fd4ed96f5c
@@ -1702,6 +1779,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LocalFileOpener
+  - hash:
+      serializedVersion: 2
+      Hash: 660deb0ce569359218f0ba85b7ce0e3a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_LightIntensityFade
   - hash:
       serializedVersion: 2
       Hash: 1630c17117972bb3c86797eade69612a
@@ -1842,6 +1925,12 @@ ScriptsOnlyBuild:
     className: LeanAudioSourceVolume
   - hash:
       serializedVersion: 2
+      Hash: 1e496b697d9232a0f396d35618b5f8b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: StudioByStorm.Scripts
+    className: ParticlePool
+  - hash:
+      serializedVersion: 2
       Hash: f050e4ebd311386367bb1906f9218b01
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
@@ -1882,6 +1971,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: StudioByStorm.Scripts
     className: CameraController
+  - hash:
+      serializedVersion: 2
+      Hash: dad3a1f1e1ecb4691721bab721edd60a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_AutoRotate
   - hash:
       serializedVersion: 2
       Hash: 67a99c72bf51722a004979b57db87178
@@ -2002,6 +2097,12 @@ ScriptsOnlyBuild:
     assemblyName: MoreMountains.NiceVibrations.Demos.dll
     namespaceName: MoreMountains.NiceVibrations
     className: DemoManager
+  - hash:
+      serializedVersion: 2
+      Hash: 421b20ccd7815ebee5e2b14a986d2efc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_New
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -2184,6 +2285,12 @@ ScriptsOnlyBuild:
     className: PowerBarElement
   - hash:
       serializedVersion: 2
+      Hash: 053af5cf08eb21aace7d1d5622658246
+    assemblyName: CFXRRuntime.dll
+    namespaceName: CartoonFX
+    className: CFXR_Effect
+  - hash:
+      serializedVersion: 2
       Hash: 2318e4390ff9ea042afdc0583c3e9070
     assemblyName: LeanTransition.dll
     namespaceName: Lean.Transition.Method
@@ -2298,13 +2405,19 @@ ScriptsOnlyBuild:
     className: InputController
   - hash:
       serializedVersion: 2
+      Hash: b8d4b9b58cda7de3878cdf499471863b
+    assemblyName: CFXRRuntime.dll
+    namespaceName: CartoonFX
+    className: CFXR_ParticleTextFontAsset
+  - hash:
+      serializedVersion: 2
       Hash: 2500253631c111a7e75ef8da0dc80447
     assemblyName: LeanTransition.dll
     namespaceName: Lean.Transition.Method
     className: LeanLightColor
   - hash:
       serializedVersion: 2
-      Hash: a89f30c0859fb59cd3f509ee9d5cc24d
+      Hash: 2769e7703d81d7938931f43d58c0f788
     assemblyName: Assembly-CSharp.dll
     namespaceName: StudioByStorm.Scripts
     className: WolfEnemy
@@ -2592,7 +2705,7 @@ ScriptsOnlyBuild:
     className: LeanEvent
   - hash:
       serializedVersion: 2
-      Hash: 26d53b2a96caf00c03c8e1357354c3e6
+      Hash: 7b5df9e3b2f1221f23fcd026442db19d
     assemblyName: Assembly-CSharp.dll
     namespaceName: StudioByStorm.Scripts
     className: GameController
@@ -2620,6 +2733,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Dypsloom.DypThePenguin.Scripts.Game
     className: ReturnToPoolDelay
+  - hash:
+      serializedVersion: 2
+      Hash: e70e7b311a1620c2e899545b2e1fdfae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_RandomDirectionTranslate
   - hash:
       serializedVersion: 2
       Hash: c5bfd0f6f4664318b8b9f50d88408421
@@ -2772,6 +2891,12 @@ ScriptsOnlyBuild:
     className: ProjectileSpawner
   - hash:
       serializedVersion: 2
+      Hash: 263025083d0a7e8d3b9c0c9ab88a743d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_SpawnSystem
+  - hash:
+      serializedVersion: 2
       Hash: b6e378348f80bed900688cd6dba0dbe1
     assemblyName: LeanGUI.dll
     namespaceName: Lean.Gui
@@ -2868,6 +2993,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 4e875e1432fadf1f077549b388792f99
+    assemblyName: CFXRDemo.dll
+    namespaceName: CartoonFX
+    className: CFXR_Demo_Rotate
+  - hash:
+      serializedVersion: 2
       Hash: bb6b9a25e695d7981ce2d853a697a828
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -2916,6 +3047,12 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
+      Hash: 6f9851bbf47096c38d97feb86b6ee4a8
+    assemblyName: CFXRRuntime.dll
+    namespaceName: CartoonFX
+    className: CFXR_ParticleText_Runtime
+  - hash:
+      serializedVersion: 2
       Hash: 1f0602e7bad1e0a9cba31ce292eee8bb
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -2950,6 +3087,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 1f16d6f3204bdd6897a6c6264682e6d6
+    assemblyName: CFXRDemo.dll
+    namespaceName: CartoonFX
+    className: CFXR_Demo_RandomText
   - hash:
       serializedVersion: 2
       Hash: 08705cef837f5d18a4c86b19b1ccf347

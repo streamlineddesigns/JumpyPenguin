@@ -26,6 +26,7 @@ namespace StudioByStorm.Scripts
         public bool groundedPlayer;
 
         //State & Animation
+        public GameObject Magic;
         public List<string> attackTriggerStrings = new List<string>();
         public Animator anim;
         protected bool bAlive;
@@ -52,8 +53,12 @@ namespace StudioByStorm.Scripts
         protected Vector3 targetRightPos;
         protected Vector3 targetLeftPos;
 
+        //other
+        protected Collider boxCollider;
+
         void Awake()
         {
+            boxCollider = GetComponent<Collider>();
             RightBounds = Screen.width;
             LeftBounds = 0;
             canPlayerMove = true;
@@ -61,6 +66,8 @@ namespace StudioByStorm.Scripts
 
         void OnEnable()
         {
+            boxCollider.enabled = true;
+            Magic.SetActive(false);
             currentFallTimer = initialFallTimer;
             bAttacking = false;
             bSwimming = false;
@@ -160,15 +167,12 @@ namespace StudioByStorm.Scripts
             if (! bAlive) {
                 if (FSM != State.Dead) {
                     FSM = State.Dead;
-                    GameObject deathParticle = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.EnemyDeath);
-                    deathParticle.transform.position = GameController.Instance.Player.transform.position;
-                    deathParticle.SetActive(true);
-                    gameObject.SetActive(false);
                 }
             //attacking
             } else if (bAttacking) {
                 if (FSM != State.Attacking) {
                     FSM = State.Attacking;
+                    boxCollider.enabled = false;
                     anim.SetTrigger(attackTriggerStrings[0]);
                 }
             //swimming
@@ -176,6 +180,7 @@ namespace StudioByStorm.Scripts
                 if (FSM != State.Swim) {
                     FSM = State.Swim;
                     anim.SetTrigger("Swim");
+                    Magic.SetActive(false);
                 }
             //falling
             } else if (! groundedPlayer && canPlayerMove && GameController.Instance.LevelController.getCurrentLevel() >= bWhatLevlAmI) {
@@ -184,6 +189,7 @@ namespace StudioByStorm.Scripts
                     if (FSM != State.Fall) {
                         FSM = State.Fall;
                         anim.SetTrigger("Fall");
+                        Magic.SetActive(false);
                     }
                 } else {
                     currentFallTimer -= Time.deltaTime;
@@ -194,6 +200,7 @@ namespace StudioByStorm.Scripts
                 if (FSM != State.Run) {
                     FSM = State.Run;
                     anim.SetTrigger("Run");
+                    Magic.SetActive(true);
                 }
             //walking
             } else {
@@ -211,7 +218,20 @@ namespace StudioByStorm.Scripts
 
         protected void Die()
         {
-            bAlive = false;
+            if (bAlive) {
+                bAlive = false;
+                GameObject deathParticle = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.EnemyDeath);
+                deathParticle.transform.position = GameController.Instance.Player.transform.position;
+                deathParticle.SetActive(true);
+                StartCoroutine(DelayDeath());
+                AudioController.Singleton.PlayEnemyDeathSound();
+            }
+        }
+
+        IEnumerator DelayDeath()
+        {
+            yield return new WaitForSeconds(0.1f);
+            gameObject.SetActive(false);
         }
 
         /*Detects if enemy moves off the right side of the screen*/

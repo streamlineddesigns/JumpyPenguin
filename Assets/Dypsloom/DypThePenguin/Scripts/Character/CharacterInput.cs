@@ -132,14 +132,19 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 return false;
             }
 
-            if (MobileInput.Singleton.SwipeUp) {
+            if (MobileInput.Singleton.SwipeUp || GameController.Instance.bPlayerJumpOverride) {
                 AudioController.Singleton.PlayJumpSound();
                 GameObject jumpParticle = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.PlayerJump);
                 jumpParticle.transform.position = GameController.Instance.Player.transform.position;
                 jumpParticle.SetActive(true);
             }
+
+            if (GameController.Instance.bPlayerJumpOverride) {
+                GameController.Instance.bPlayerJumpOverride = false;
+                return true;
+            }
+
             return MobileInput.Singleton.SwipeUp;
-            //return MobileInput.Singleton.JumpButtonPressed;
         }
 
         protected void playSlideSound()

@@ -34,6 +34,7 @@ namespace StudioByStorm.Scripts
             Enemy,
             Water,
         };
+        public bool bPlayerJumpOverride = false;
 
         void Awake()
         {

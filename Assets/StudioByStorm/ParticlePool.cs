@@ -89,7 +89,6 @@ namespace StudioByStorm.Scripts
             }
 
             if (particle == null) {
-                Debug.LogError("PARTICLE INSTANTIATING");
                 //instantiate some new new and add to pool
                 switch(particleType) {
                     //Enemy Death

@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 607, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MinSize: {x: 609, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 1
-  controlID: 129
+  controlID: 58
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 731
-  m_MinSize: {x: 607, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MinSize: {x: 609, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 130
+  controlID: 59
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 91
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -238,8 +238,8 @@ MonoBehaviour:
     y: 0
     width: 566
     height: 731
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -424,21 +424,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a099fdffb4e4fdff3a31feffd274feff28cffeff701bffffac51ffff967fffff6cfaffff66ba0000a4bb02003e240300
+      m_ExpandedIDs: 64f3fdffcaf3fdff32f7fdff306afefffac2feffd0dcfeff5824ffffea2effff7c39ffff70f9ffff86500000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: JumpSound
+        m_OriginalName: JumpSound
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 21042
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -487,20 +487,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/StudioByStorm/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/StudioByStorm/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\strea\Documents\GitHub\JumpyPenguin
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 325}
-    m_SelectedIDs: ce660000
-    m_LastClickedID: 26318
-    m_ExpandedIDs: 000000008c4700001465000016650000186500001a6500001c6500001e65000020650000226500002465000026650000286500002a6500002c6500002e65000030650000326500003465000036650000386500003a6500003c6500003e65000040650000426500004465000046650000486500004a6500004c6500004e6500005065000052650000546500005665000042670000346900003e69000064690000d4cf000000ca9a3b
+    scrollPos: {x: 0, y: 1717}
+    m_SelectedIDs: 96680000
+    m_LastClickedID: 26774
+    m_ExpandedIDs: 00000000e447000040660000426600004466000046660000486600004a6600004c6600004e66000050660000526600005466000056660000586600005a6600005c6600005e66000060660000626600006466000066660000686600006a6600006c6600006e66000070660000726600007466000076660000786600007a6600007c6600007e660000806600008266000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,7 +528,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c4700001465000016650000186500001a6500001c6500001e65000020650000226500002465000026650000286500002a6500002c6500002e65000030650000326500003465000036650000386500003a6500003c6500003e65000040650000426500004465000046650000486500004a6500004c6500004e65000050650000526500005465000056650000
+    m_ExpandedIDs: 00000000e447000040660000426600004466000046660000486600004a6600004c6600004e66000050660000526600005466000056660000586600005a6600005c6600005e66000060660000626600006466000066660000686600006a6600006c6600006e66000070660000726600007466000076660000786600007a6600007c6600007e6600008066000082660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,15 +559,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 50720400c23f0000147104007e540000585400006e5400005254000068520000565400005e5400007c5400007654000072540000044100008e40000018510000fa5600000c050500ea5600005407010018570000ec5600000657000008570000a44000001a4100008e530000927000006855020094130400d67b04006a5300006c7a0000c4f60400687a0000527a00007a7a0000547a0000085500005c7a00004e68000032560000727a000030560000147d0000307d0000207d0000707a0000807a0000827a00006e7a00009ef70400627a00007c7a000092f104007e7a0000f4400000567a0000747a0000647a00006a7a0000847a0000285b0100c8420100ac3e0100285a0000a8c4000006300400cc630000962f0100e8630000e4630000f26300003623030060df020078970000524d00009e5b0000f6590000ce800000d04000005a4200004041000062410000264a0000404a0000584c00003c4b0000e6300500aa3105001a4a0000604100005081000076a40000289c00003a6c0000405a0000f04100007a4100001ac01400b03f01001a550000cccd00004a4100000a5d0000bec200004c41000052410000424100003a390000623900002e4a000000000000069403000c94030048650000e8570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Sounds
-      m_OriginalName: Sounds
+      m_Name: IL3DN_Char_Land_Dirt
+      m_OriginalName: IL3DN_Char_Land_Dirt
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 53248
+      m_UserData: 29370
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -646,9 +646,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.5002213, y: 20.751072, z: -13.916535}
+    m_Target: {x: -4.136974, y: 72.32539, z: -11.604552}
     speed: 2
-    m_Value: {x: 4.5002213, y: 20.751072, z: -13.916535}
+    m_Value: {x: -4.136974, y: 72.32539, z: -11.604552}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -694,13 +694,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.12112462, y: 0.3019668, z: -0.03873792, w: 0.9448302}
+    m_Target: {x: 0.20096822, y: -0.6111421, z: 0.16419144, w: 0.74780935}
     speed: 2
-    m_Value: {x: 0.121121, y: 0.30195776, z: -0.03873676, w: 0.9448019}
+    m_Value: {x: 0.20096214, y: -0.6111236, z: 0.16418646, w: 0.7477867}
   m_Size:
-    m_Target: 10
+    m_Target: 1.6132272
     speed: 2
-    m_Value: 10
+    m_Value: 1.6132272
   m_Ortho:
     m_Target: 0
     speed: 2

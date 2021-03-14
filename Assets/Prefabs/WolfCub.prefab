@@ -1033,7 +1033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2649943768936526605
 Transform:
   m_ObjectHideFlags: 0
@@ -1488,6 +1488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5117493873478430892}
+  - component: {fileID: 4370923915286751577}
   - component: {fileID: 2672746883711951442}
   - component: {fileID: 6417963924386454489}
   - component: {fileID: 6417963924386454490}
@@ -1514,6 +1515,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &4370923915286751577
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417963924386454491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.5, z: 1}
+  m_Center: {x: -0.5, y: 1.25, z: 0}
 --- !u!65 &2672746883711951442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1542,6 +1556,7 @@ MonoBehaviour:
   bWhatLevlAmI: 0
   canPlayerMove: 0
   groundedPlayer: 0
+  Magic: {fileID: 2652188100832637433}
   attackTriggerStrings:
   - Attack1
   - Attack2

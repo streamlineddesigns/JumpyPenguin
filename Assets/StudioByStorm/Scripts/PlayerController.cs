@@ -54,6 +54,10 @@ namespace StudioByStorm.Scripts
         IEnumerator SlayEnemy()
         {
             bSlayingEnemy = true;
+            //make player bounce off enemy
+            JumpOverride();
+
+            //Give player extra score for killing enemy
             GameController.Instance.LevelController.incrementScore();
             yield return new WaitForSeconds(0.25f);
             GameController.Instance.LevelController.incrementScore();
@@ -64,6 +68,11 @@ namespace StudioByStorm.Scripts
             yield return new WaitForSeconds(0.25f);
             GameController.Instance.LevelController.incrementScore();
             bSlayingEnemy = false;
+        }
+
+        protected void JumpOverride()
+        {
+            GameController.Instance.bPlayerJumpOverride = true;
         }
 
         void WaterEffect()
