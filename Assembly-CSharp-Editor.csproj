@@ -48,6 +48,9 @@
      <Compile Include="Assets\Purchased\IL3DN\Scripts\Editor\IL3DN_ColorManagerTextures_Editor.cs" />
      <Compile Include="Assets\Purchased\IL3DN\Scripts\Editor\IL3DN_Snow_Editor.cs" />
      <Compile Include="Assets\Purchased\IL3DN\Scripts\Editor\IL3DN_Wind_Editor.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Editor\CFX_InspectorHelpEditor.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Editor\CFX_SpawnSystemEditor.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Editor\Menu\AnimUnhideTool.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Editor\Menu\MalbersMenu.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Editor\Readme\ReadmeEditor.cs" />
@@ -745,6 +748,22 @@
     <ProjectReference Include="UniWebView-CSharp.csproj">
       <Project>{51cdbad1-0808-ed63-c22b-6862240f955b}</Project>
       <Name>UniWebView-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{677d727a-5a19-2852-385e-818593cc8f5b}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{4e59d6b2-1b76-e74b-8477-63ee0173eeed}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{a7bbb923-9ff1-e60c-e97a-84dce5bce552}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemoEditor.csproj">
+      <Project>{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}</Project>
+      <Name>CFXRDemoEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

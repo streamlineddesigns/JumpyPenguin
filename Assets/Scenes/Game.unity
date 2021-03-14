@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13892,8 +13892,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3084c14954263a346ad398d954b17c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyDeathParticle: []
-  EnemyDeathParticlePool: []
+  EnemyDeathParticle: {fileID: 8104613743888810349, guid: 9a1c7198b91c9fb499d5ee0ec6f08631,
+    type: 3}
+  PlayerJumpParticle: {fileID: 4656049367676202180, guid: 2617a579d4edbd341bb6289906b3f7c1,
+    type: 3}
+  WaterSplashParticle: {fileID: 1434393670596540187, guid: 6d38149214d735646a4f1aa5e7a663cb,
+    type: 3}
 --- !u!1 &769984874
 GameObject:
   m_ObjectHideFlags: 0

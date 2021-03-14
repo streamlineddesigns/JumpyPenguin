@@ -50,7 +50,7 @@ namespace StudioByStorm.Scripts
             incrementScore();
         }
 
-        protected void incrementScore()
+        public void incrementScore()
         {
             score += 1;
             GameController.Instance.UserInterfaceController.updateScore(score);

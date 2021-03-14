@@ -134,6 +134,9 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
             if (MobileInput.Singleton.SwipeUp) {
                 AudioController.Singleton.PlayJumpSound();
+                GameObject jumpParticle = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.PlayerJump);
+                jumpParticle.transform.position = GameController.Instance.Player.transform.position;
+                jumpParticle.SetActive(true);
             }
             return MobileInput.Singleton.SwipeUp;
             //return MobileInput.Singleton.JumpButtonPressed;

@@ -21,11 +21,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanCommon", "LeanCommon.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dypsloom.Shared.Utility", "Dypsloom.Shared.Utility.csproj", "{7df24644-6c5e-ee04-8ecc-20fe7fd0fb02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXRRuntime", "CFXRRuntime.csproj", "{677d727a-5a19-2852-385e-818593cc8f5b}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXRDemo", "CFXRDemo.csproj", "{a7bbb923-9ff1-e60c-e97a-84dce5bce552}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{cae1c4d6-77cc-f60f-1aa4-05e6164b99cf}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniWebView-CSharp.Editor", "UniWebView-CSharp.Editor.csproj", "{168874df-b636-abcb-ebe3-6baf8a5a4a74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.NiceVibrations.Editor", "MoreMountains.NiceVibrations.Editor.csproj", "{6e21b8b7-2459-4a3e-5286-e2d93867a7ca}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXREditor", "CFXREditor.csproj", "{4e59d6b2-1b76-e74b-8477-63ee0173eeed}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXRDemoEditor", "CFXRDemoEditor.csproj", "{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,12 +60,20 @@ Global
 		{ce047cbe-b60f-30e6-b1ed-929d53a864d2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7df24644-6c5e-ee04-8ecc-20fe7fd0fb02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7df24644-6c5e-ee04-8ecc-20fe7fd0fb02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677d727a-5a19-2852-385e-818593cc8f5b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677d727a-5a19-2852-385e-818593cc8f5b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{a7bbb923-9ff1-e60c-e97a-84dce5bce552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{a7bbb923-9ff1-e60c-e97a-84dce5bce552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{cae1c4d6-77cc-f60f-1aa4-05e6164b99cf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{cae1c4d6-77cc-f60f-1aa4-05e6164b99cf}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168874df-b636-abcb-ebe3-6baf8a5a4a74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{168874df-b636-abcb-ebe3-6baf8a5a4a74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6e21b8b7-2459-4a3e-5286-e2d93867a7ca}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6e21b8b7-2459-4a3e-5286-e2d93867a7ca}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4e59d6b2-1b76-e74b-8477-63ee0173eeed}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4e59d6b2-1b76-e74b-8477-63ee0173eeed}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -126,6 +126,20 @@
      <Compile Include="Assets\Purchased\InAppBrowser\Example\LocalFileOpener.cs" />
      <Compile Include="Assets\Purchased\InAppBrowser\Scripts\InAppBrowser.cs" />
      <Compile Include="Assets\Purchased\InAppBrowser\Scripts\InAppBrowserBridge.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutodestructWhenNoChildren.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
+     <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Spawn System\CFX_SpawnSystem.cs" />
      <Compile Include="Assets\Purchased\LowPolyEarth\EarthSpinScript.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Events\UnityEventRaiser.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Readme\Readme.cs" />
@@ -161,8 +175,12 @@
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Fog_PP.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\DragonEggs_Shader.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
      <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAB_Alpha8.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x2.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
      <None Include="Assets\Purchased\Snow Particles\Shaders\Particle Alpha Blend +Shadow.shader" />
@@ -170,6 +188,7 @@
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x4.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask4Toon.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_CardSimple.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask4Realistic.shader" />
      <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\TransparentCutoutDiffuseCullOff.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
@@ -179,6 +198,7 @@
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Outline.shader" />
      <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\TransparentBumpedCullOff.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Pine.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Purchased\NiceVibrations\ThirdParty\Newtonsoft\NewtonsoftJsonLicense.txt" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color3x3.shader" />
@@ -186,6 +206,7 @@
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Wind Shader.shader" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Grass.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Terrain.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\CartoonFX Readme.txt" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\Lighting_DR.hlsl" />
      <None Include="Assets\Purchased\Lean\READ ME.txt" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
@@ -204,6 +225,7 @@
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Sky.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\AnisotropicCircular.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Decals.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\AnisotropicWard.shader" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Matcap.shader" />
@@ -215,16 +237,19 @@
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_CardComplex.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Purchased\NiceVibrations\readme.txt" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster.txt" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Grass.shader" />
      <None Include="Assets\Purchased\FlatKit\[READ ME].txt" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_OpaqueSurface.shader" />
      <None Include="Assets\Purchased\NiceVibrations\license.txt" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Crystal.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\StudioByStorm\Scripts\TODO.txt" />
      <None Include="Assets\Purchased\WindTrailsEffect\ReadMe.txt" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Fluffy_Platform.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\StylizedSurfaceCutout.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_SoftParticle.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x2 Emission.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
@@ -232,10 +257,12 @@
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Fog.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Purchased\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\Resources\FlatKitOutline.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
      <None Include="Assets\Purchased\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Purchased\FlatKit\[Render Pipeline] URP\RenderFeatures\Fog\Resources\FlatKitFog.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\LightPlane.shader" />
+     <None Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask8Realistic.shader" />
@@ -896,6 +923,22 @@
     <ProjectReference Include="UniWebView-CSharp.csproj">
       <Project>{51cdbad1-0808-ed63-c22b-6862240f955b}</Project>
       <Name>UniWebView-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{677d727a-5a19-2852-385e-818593cc8f5b}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{4e59d6b2-1b76-e74b-8477-63ee0173eeed}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{a7bbb923-9ff1-e60c-e97a-84dce5bce552}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemoEditor.csproj">
+      <Project>{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}</Project>
+      <Name>CFXRDemoEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

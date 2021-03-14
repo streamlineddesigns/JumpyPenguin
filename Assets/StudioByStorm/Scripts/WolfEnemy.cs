@@ -79,7 +79,7 @@ namespace StudioByStorm.Scripts
         void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player" && !bSwimming) {
-                if (other.gameObject.transform.position.y - 1.5f > transform.position.y) {
+                if (other.gameObject.transform.position.y - 1.75f > transform.position.y) {
                     Die();
                 } else {
                     bAttacking = true;
@@ -160,7 +160,9 @@ namespace StudioByStorm.Scripts
             if (! bAlive) {
                 if (FSM != State.Dead) {
                     FSM = State.Dead;
-                    //Bring in particle system
+                    GameObject deathParticle = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.EnemyDeath);
+                    deathParticle.transform.position = GameController.Instance.Player.transform.position;
+                    deathParticle.SetActive(true);
                     gameObject.SetActive(false);
                 }
             //attacking
