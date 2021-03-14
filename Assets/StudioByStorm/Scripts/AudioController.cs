@@ -8,6 +8,7 @@ public class AudioController : MonoBehaviour
     public AudioSource SlideSound;
     public AudioSource JumpSound;
     public AudioSource WaterSplash;
+    public AudioSource WolfAttack;
     public List<AudioSource> SnowWalkingSounds = new List<AudioSource>();
     protected bool isWalkingSoundPlaying;
 
@@ -71,5 +72,10 @@ public class AudioController : MonoBehaviour
     public void PlayWaterSplashSound()
     {
         if (! WaterSplash.isPlaying) WaterSplash.Play();
+    }
+
+    public void PlayWolfAttackSound()
+    {
+        if (! WolfAttack.isPlaying) WolfAttack.Play();
     }
 }

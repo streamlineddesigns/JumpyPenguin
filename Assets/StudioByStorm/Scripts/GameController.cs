@@ -30,6 +30,10 @@ namespace StudioByStorm.Scripts
 
         public LevelController LevelController;
         public UserInterfaceController UserInterfaceController;
+        public enum DeathType {
+            Enemy,
+            Water,
+        };
 
         void Awake()
         {
@@ -82,6 +86,7 @@ namespace StudioByStorm.Scripts
             yield return new WaitForSeconds(1.5f);
             GameView.SetActive(true);
             _isGameActive = true;
+            LevelController.spawnNewLevel();
         }
 
         protected bool outRightBounds()
@@ -96,11 +101,16 @@ namespace StudioByStorm.Scripts
             return (Camera.WorldToScreenPoint(targetLeftPos).x < LeftBounds);
         }
 
-        public void GameOver()
+        public void GameOver(DeathType howPlayerDied)
         {
-            AudioController.Singleton.PlayWaterSplashSound();
+            if (howPlayerDied == DeathType.Water) {
+                AudioController.Singleton.PlayWaterSplashSound();
+            } else if (howPlayerDied == DeathType.Enemy) {
+                AudioController.Singleton.PlayWolfAttackSound();
+            }
             _isGameActive = false;
             _isGameOver = true;
+            UserInterfaceController.GameOver();
         }
     }
 }

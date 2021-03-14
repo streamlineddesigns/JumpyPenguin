@@ -9,6 +9,8 @@ public class UserInterfaceController : MonoBehaviour
     public Text scoreText;
     public GameObject PauseView;
     public GameObject GameView;
+    public GameObject GameOverView;
+    public GameObject FrostView;
 
     public void updateScore(int score)
     {
@@ -33,5 +35,24 @@ public class UserInterfaceController : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+    public void GameOver()
+    {
+        GameView.SetActive(false);
+        PauseView.SetActive(false);
+        Time.timeScale = 1;
+        StartCoroutine(DelayedGameOver());
+    }
+
+    IEnumerator DelayedGameOver()
+    {
+        yield return new WaitForSeconds(3.0f);
+        GameOverView.SetActive(true);
+    }
+
+    public void FrostCamera()
+    {
+        FrostView.SetActive(true);
     }
 }

@@ -42,6 +42,8 @@ namespace StudioByStorm.Scripts
 
         public GameObject getAvailableLevel()
         {
+            Shuffle(Pool);
+            
             int index = 0;
             GameObject level = null;
             
@@ -58,6 +60,7 @@ namespace StudioByStorm.Scripts
                 int randomIndex = Random.Range(0, ObjectsToPool.Count);
                 instantiateLevel(randomIndex);
                 level = Pool[Pool.Count - 1];
+                Debug.LogError("INSTANTIATING NEW NEW");
             }
 
             return level;

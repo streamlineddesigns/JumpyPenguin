@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_17;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;UNITY_ASTC_ONLY_DECOMPRESS;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_17;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;UNITY_ASTC_ONLY_DECOMPRESS;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS;CROSS_PLATFORM_INPUT;MOBILE_INPUT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -127,8 +127,19 @@
      <Compile Include="Assets\Purchased\InAppBrowser\Scripts\InAppBrowser.cs" />
      <Compile Include="Assets\Purchased\InAppBrowser\Scripts\InAppBrowserBridge.cs" />
      <Compile Include="Assets\Purchased\LowPolyEarth\EarthSpinScript.cs" />
+     <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Events\UnityEventRaiser.cs" />
+     <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Readme\Readme.cs" />
+     <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Utilities\UnityUtils.cs" />
+     <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Utilities\UseTransform.cs" />
+     <Compile Include="Assets\Purchased\Snow Blizzard Effects Mobile\Scripts\LockRotation.cs" />
+     <Compile Include="Assets\Purchased\Snow Particles\Scripts\DestroyParticlesBelow.cs" />
+     <Compile Include="Assets\Purchased\Snow Particles\Scripts\EnableSelectedGameObject.cs" />
+     <Compile Include="Assets\Purchased\Snow Particles\Scripts\ParticlePivot.cs" />
+     <Compile Include="Assets\StudioByStorm\ParticlePool.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\AudioController.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\CameraController.cs" />
+     <Compile Include="Assets\StudioByStorm\Scripts\Enemy.cs" />
+     <Compile Include="Assets\StudioByStorm\Scripts\EnemyPool.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\GameController.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\InputController.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\Level.cs" />
@@ -139,24 +150,40 @@
      <Compile Include="Assets\StudioByStorm\Scripts\SnowBreakable.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\SplashView.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\UserInterfaceController.cs" />
+     <Compile Include="Assets\StudioByStorm\Scripts\WolfEnemy.cs" />
+     <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\TransparentCutoutBumpedCullOff.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Water.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask8Toon.shader" />
      <None Include="Assets\Editor Default Resources\nu Assets\Shared\Shaders\CanvasSelection.shader" />
      <None Include="Assets\Editor Default Resources\nu Assets\Shared\Shaders\Canvas.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Fog_PP.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\DragonEggs_Shader.shader" />
+     <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x2.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
+     <None Include="Assets\Purchased\Snow Particles\Shaders\Particle Alpha Blend +Shadow.shader" />
      <None Include="Assets\Purchased\NiceVibrations\OlderVersions\v2.0.1\NiceVibrations-v-2-0-1-readme.txt" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x4.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask4Toon.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_CardSimple.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask4Realistic.shader" />
+     <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\TransparentCutoutDiffuseCullOff.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
      <None Include="Assets\Purchased\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Cloud.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Golem Shader.shader" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Outline.shader" />
+     <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\TransparentBumpedCullOff.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Pine.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Purchased\NiceVibrations\ThirdParty\Newtonsoft\NewtonsoftJsonLicense.txt" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color3x3.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x3.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Wind Shader.shader" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Grass.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Terrain.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\Lighting_DR.hlsl" />
@@ -164,18 +191,23 @@
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Editor Default Resources\nu Assets\Shared\Shaders\CanvasChannels.shader" />
+     <None Include="Assets\Purchased\Snow Particles\Snow Particles Readme.txt" />
      <None Include="Assets\Purchased\NiceVibrations\Common\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Purchased\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Purchased\Snow Blizzard Effects Mobile\Shaders\TransparentBumpSpecCullOff.shader" />
      <None Include="Assets\Purchased\NiceVibrations\OlderVersions\v1.7\NiceVibrations-v-1-7-readme.txt" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Branch.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Sky.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\AnisotropicCircular.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Decals.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\AnisotropicWard.shader" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Matcap.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\MWater2.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Leaf.shader" />
      <None Include="Assets\Editor Default Resources\nu Assets\Shared\Shaders\CanvasUtil.cginc" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Cloud.shader" />
@@ -194,6 +226,7 @@
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Fluffy_Platform.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\StylizedSurfaceCutout.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_SoftParticle.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x2 Emission.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Editor Default Resources\nu Assets\Shared\Shaders\CanvasOpaque.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Fog.shader" />
@@ -205,7 +238,9 @@
      <None Include="Assets\Purchased\FlatKit\Shaders\LightPlane.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask8Realistic.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\Purchased\Malbers Animations\Common\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Purchased\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -818,6 +853,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{1e2a2e3c-836c-bab0-75ce-065acd8a652f}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Dypsloom.Shared.Utility.csproj">
       <Project>{7df24644-6c5e-ee04-8ecc-20fe7fd0fb02}</Project>
       <Name>Dypsloom.Shared.Utility</Name>

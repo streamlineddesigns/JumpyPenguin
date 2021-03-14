@@ -19,6 +19,11 @@ public class SnowBreakable : MonoBehaviour
 
     protected bool bBreak;
 
+    void OnDisable()
+    {
+        transform.localPosition = initialPosition;
+    }
+
     void OnEnable()
     {
         initialPosition = transform.localPosition;
