@@ -46,8 +46,8 @@ namespace StudioByStorm.Scripts
                 parts[l].SetActive(true);
             }
 
-            if (spawnedEnemy != null) {
-                spawnedEnemy.SetActive(false);
+            if (spawnedEnemy != null && spawnedEnemy.activeSelf) {
+                spawnedEnemy.GetComponent<Enemy>().Despawn();
             }
 
             bDespawning = false;

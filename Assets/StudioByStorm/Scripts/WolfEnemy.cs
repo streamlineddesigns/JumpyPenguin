@@ -12,6 +12,8 @@ namespace StudioByStorm.Scripts
         protected CharacterController controller;
         protected float moveLeft = -1.0f;
         protected float moveRight = 1.0f;
+        protected float moveUp = 1.0f;
+        protected float waterOffset = 2.5f;
         public bool canPlayerMove;
 
         //Speed
@@ -66,6 +68,7 @@ namespace StudioByStorm.Scripts
 
         void OnEnable()
         {
+            canEnableCheck();
             boxCollider.enabled = true;
             Magic.SetActive(false);
             currentFallTimer = initialFallTimer;
@@ -73,6 +76,7 @@ namespace StudioByStorm.Scripts
             bSwimming = false;
             bAlive = true;
             FSM = State.Walk;
+            resetDespawnTimer();
         }
 
         // Start is called before the first frame update
@@ -123,9 +127,8 @@ namespace StudioByStorm.Scripts
                 //Swim
                 } else if (FSM == State.Swim) {
                     Vector3 move;
-                    if (transform.position.y < GameController.Instance.LevelController.Water.transform.position.y) {
-                        float offset = (Mathf.Abs(GameController.Instance.LevelController.Water.transform.position.y - transform.position.y)) / 5.0f;
-                        move = new Vector3(moveRight, offset, 0);
+                    if (transform.position.y + waterOffset < GameController.Instance.LevelController.Water.transform.position.y) {
+                        move = new Vector3(moveRight, moveUp, 0);
                     } else {
                         move = new Vector3(moveRight, 0, 0);
                     }
@@ -254,6 +257,15 @@ namespace StudioByStorm.Scripts
                 currentFallTimer = initialFallTimer;
             }
             return outta;
+        }
+
+        override protected bool bCanDespawn()
+        {
+            if (outLeftBounds() || outRightBounds()) {
+                return true;
+            }
+
+            return false;
         }
 
         public void Shuffle(List<string> list)  

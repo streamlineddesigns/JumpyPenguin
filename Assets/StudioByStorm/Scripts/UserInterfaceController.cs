@@ -41,14 +41,15 @@ public class UserInterfaceController : MonoBehaviour
     {
         GameView.SetActive(false);
         PauseView.SetActive(false);
-        Time.timeScale = 1;
         StartCoroutine(DelayedGameOver());
     }
 
     IEnumerator DelayedGameOver()
     {
+        Time.timeScale = 1;
         yield return new WaitForSeconds(3.0f);
         GameOverView.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void FrostCamera()

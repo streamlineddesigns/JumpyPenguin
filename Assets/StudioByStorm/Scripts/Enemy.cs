@@ -4,20 +4,49 @@ using UnityEngine;
 
 namespace StudioByStorm.Scripts
 {
-    public class Enemy : MonoBehaviour
+    public abstract class Enemy : MonoBehaviour
     {
         public float bWhatLevlAmI;
+        protected float initialDespawnTimer = 10.0f;
+        public float currentDespawnTimer;
 
-        // Start is called before the first frame update
-        void Start()
+        public void Despawn()
         {
-            
+            if (gameObject.activeSelf) {
+                StartCoroutine(DespawnCoroutine());
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        protected IEnumerator DespawnCoroutine()
         {
-            
+            yield return new WaitUntil(()=> bCanDespawn() || bDespawnTimerOver());
+            gameObject.SetActive(false);
+        }
+
+        protected abstract bool bCanDespawn();
+
+        protected bool bDespawnTimerOver()
+        {
+            if (currentDespawnTimer <= 0.0f) {
+                return true;
+            } else {
+                currentDespawnTimer -= Time.deltaTime;
+            }
+
+            return false;
+        }
+
+        protected void resetDespawnTimer()
+        {
+            currentDespawnTimer = initialDespawnTimer;
+        }
+
+        protected void canEnableCheck()
+        {
+            //can't enable
+            if (GameController.Instance.LevelController.getCurrentLevel() <= 1) {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

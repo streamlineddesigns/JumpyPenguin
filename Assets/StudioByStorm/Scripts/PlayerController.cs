@@ -80,7 +80,7 @@ namespace StudioByStorm.Scripts
             GameObject waterSplash = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.WaterSplash);
             Vector3 targetPosition = new Vector3();
             targetPosition.x = GameController.Instance.Player.transform.position.x;
-            targetPosition.y = GameController.Instance.Player.transform.position.y + 2.0f;
+            targetPosition.y = GameController.Instance.Player.transform.position.y + 1.25f;
             targetPosition.z = GameController.Instance.Player.transform.position.z;
             waterSplash.transform.position = targetPosition;
             waterSplash.SetActive(true);
