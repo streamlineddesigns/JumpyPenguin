@@ -37,7 +37,7 @@ namespace MoreMountains.NiceVibrations
         protected virtual void UpdateSettings()
         {
             QualitySettings.vSyncCount = VSyncCount;
-            Application.targetFrameRate = TargetFPS;
+            //Application.targetFrameRate = TargetFPS;
         }
 	}
 }

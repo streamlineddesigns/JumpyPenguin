@@ -810,8 +810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parts: []
   objEnemySpawnPoints:
-  - {fileID: 7495428561832003679}
-  - {fileID: 7495428563654581108}
+  - {fileID: 7495428563176274508}
+  - {fileID: 7495428562517507747}
   bDespawning: 0
   bWhatLevlAmI: 0
 --- !u!1 &7495428561832003679

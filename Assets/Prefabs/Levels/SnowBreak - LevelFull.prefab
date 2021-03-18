@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 5549956518892047576}
   - component: {fileID: 8410643839476737856}
   m_Layer: 0
-  m_Name: SnowBreak
+  m_Name: SnowBreakCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,3 +1562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parts: []
+  objEnemySpawnPoints: []
+  bDespawning: 0
+  bWhatLevlAmI: 0

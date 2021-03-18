@@ -17,6 +17,7 @@ namespace StudioByStorm.Scripts
         protected float despawnSmoothing = 1.5f;
         protected GameObject spawnedEnemy;
         public float bWhatLevlAmI;
+        protected bool isInitialized = false;
 
         void Awake()
         {
@@ -46,27 +47,21 @@ namespace StudioByStorm.Scripts
                 parts[l].SetActive(true);
             }
 
-            if (spawnedEnemy != null && spawnedEnemy.activeSelf) {
+            if (isInitialized && spawnedEnemy != null && spawnedEnemy.activeSelf) {
                 spawnedEnemy.GetComponent<Enemy>().Despawn();
             }
 
             bDespawning = false;
+
+            isInitialized = true;
         }
 
         void OnEnable()
         {
             despawnPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + despawnOffset, gameObject.transform.position.z);
 
-            if (GameController.Instance != null && GameController.Instance.isGameActive && ! (objEnemySpawnPoints == null || objEnemySpawnPoints.Length == 0)) {
-                
-                initEnemySpawnPoints();
-
-                spawnedEnemy = EnemyPool.Singleton.getAvailableEnemy();
-                if (spawnedEnemy != null) {
-                    spawnedEnemy.SetActive(true);
-                    spawnedEnemy.transform.position = vecEnemySpawnPoints[0];
-                    spawnedEnemy.GetComponent<Enemy>().bWhatLevlAmI = bWhatLevlAmI;
-                }
+            if (isInitialized && GameController.Instance != null && GameController.Instance.isGameActive && ! (objEnemySpawnPoints == null || objEnemySpawnPoints.Length == 0)) {
+                SpawnEnemy();
             }
         }
 
@@ -104,8 +99,17 @@ namespace StudioByStorm.Scripts
             }
         }
 
+        protected void SpawnEnemy()
+        {
+            //initEnemySpawnPoints();
 
-        void initEnemySpawnPoints()
+            spawnedEnemy = EnemyPool.Singleton.getAvailableEnemy();
+            if (spawnedEnemy != null) {
+                spawnedEnemy.GetComponent<Enemy>().initFromLevel(objEnemySpawnPoints[0].transform.position, objEnemySpawnPoints[1].transform.position, bWhatLevlAmI);
+            }
+        }
+
+        protected void initEnemySpawnPoints()
         {
             if (! (objEnemySpawnPoints == null || objEnemySpawnPoints.Length == 0)) {
                 vecEnemySpawnPoints = new Vector3[objEnemySpawnPoints.Length];

@@ -9,6 +9,12 @@ namespace StudioByStorm.Scripts
         public float bWhatLevlAmI;
         protected float initialDespawnTimer = 10.0f;
         public float currentDespawnTimer;
+        protected float lastSpawnPosition = 0;//0=left; 1=right;
+
+        //movement
+        protected float horizontalMovement = 0.0f;
+        protected float moveLeft = -1.0f;
+        protected float moveRight = 1.0f;
 
         public void Despawn()
         {
@@ -44,9 +50,43 @@ namespace StudioByStorm.Scripts
         protected void canEnableCheck()
         {
             //can't enable
-            if (GameController.Instance.LevelController.getCurrentLevel() <= 1) {
+            if (GameController.Instance.LevelController.getCurrentLevel() <= 5) {
                 gameObject.SetActive(false);
             }
+        }
+
+        public void initFromLevel(Vector3 leftPos, Vector3 rightPos, float whatLevel)
+        {
+            //set level
+            bWhatLevlAmI = whatLevel;
+
+            //Set to right position, if previously was left
+            if (EnemyPool.Singleton.lastSpawnPosition == 0) {
+                //set position
+                lastSpawnPosition = 1;
+                transform.position = rightPos;
+                //set rotation
+                Quaternion targetEuler = transform.rotation;
+                targetEuler.y = 0;
+                transform.rotation = targetEuler;
+                //Set to right movement
+                horizontalMovement = moveLeft;
+
+            //Set to left position, if previously was right
+            } else {
+                //set position
+                lastSpawnPosition = 0; 
+                transform.position = leftPos;
+                //set rotation
+                Quaternion targetEuler = transform.rotation;
+                targetEuler.y = 180;
+                transform.rotation = targetEuler;
+                //Set to right movement
+                horizontalMovement = moveRight;
+            }
+
+            //set to active
+            gameObject.SetActive(true);
         }
     }
 }

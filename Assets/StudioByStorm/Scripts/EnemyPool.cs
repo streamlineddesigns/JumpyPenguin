@@ -9,6 +9,7 @@ namespace StudioByStorm.Scripts
         public static EnemyPool Singleton;
         public List<GameObject> ObjectsToPool = new List<GameObject>();
         public List<GameObject> Pool = new List<GameObject>();
+        public float lastSpawnPosition = 0;//0=left; 1=right;
 
         void Awake()
         {
@@ -52,6 +53,12 @@ namespace StudioByStorm.Scripts
 
             if (enemy == null) {
                 //its okay to be null
+            }
+
+            if (lastSpawnPosition == 0) {
+                lastSpawnPosition = 1;
+            } else {
+                lastSpawnPosition = 0;
             }
 
             return enemy;

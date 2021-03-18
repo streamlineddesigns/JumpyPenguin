@@ -10,8 +10,6 @@ namespace StudioByStorm.Scripts
 
         //movement
         protected CharacterController controller;
-        protected float moveLeft = -1.0f;
-        protected float moveRight = 1.0f;
         protected float moveUp = 1.0f;
         protected float waterOffset = 2.5f;
         public bool canPlayerMove;
@@ -49,7 +47,7 @@ namespace StudioByStorm.Scripts
         protected float currentFallTimer;
 
         //Bounds checking
-        protected float playerWidth = 3.0f;
+        public float playerWidth = 3.0f;
         protected float RightBounds;
         protected float LeftBounds;
         protected Vector3 targetRightPos;
@@ -118,19 +116,19 @@ namespace StudioByStorm.Scripts
             if (canPlayerMove && !bAttacking) {
                 //walk
                 if (FSM == State.Walk) {
-                    Vector3 move = new Vector3(moveRight, 0, 0);
+                    Vector3 move = new Vector3(horizontalMovement, 0, 0);
                     controller.Move(move * Time.deltaTime * walkSpeed);
                 //Run
                 } else if (FSM == State.Run) {
-                    Vector3 move = new Vector3(moveRight, 0, 0);
+                    Vector3 move = new Vector3(horizontalMovement, 0, 0);
                     controller.Move(move * Time.deltaTime * runSpeed);
                 //Swim
                 } else if (FSM == State.Swim) {
                     Vector3 move;
                     if (transform.position.y + waterOffset < GameController.Instance.LevelController.Water.transform.position.y) {
-                        move = new Vector3(moveRight, moveUp, 0);
+                        move = new Vector3(horizontalMovement, moveUp, 0);
                     } else {
-                        move = new Vector3(moveRight, 0, 0);
+                        move = new Vector3(horizontalMovement, 0, 0);
                     }
                     controller.Move(move * Time.deltaTime * swimSpeed);
                 } 
@@ -145,16 +143,16 @@ namespace StudioByStorm.Scripts
 
         protected void BoundsChecking()
         {
-            if (outRightBounds()) {
+            if (lastSpawnPosition == 0 && outRightBounds()) {
 
                 canPlayerMove = false;
-                Vector3 targetLeftPos = new Vector3(- transform.position.x - (playerWidth / 2), transform.position.y, transform.position.z);
+                Vector3 targetLeftPos = new Vector3(- (transform.position.x + 2.0f), transform.position.y, transform.position.z);
                 transform.position = targetLeftPos;
 
-            } else if (outLeftBounds()) {
+            } else if (lastSpawnPosition == 1 && outLeftBounds()) {
 
                 canPlayerMove = false;
-                Vector3 targetRightPos = new Vector3(Mathf.Abs(transform.position.x) - (playerWidth / 2), transform.position.y, transform.position.z);
+                Vector3 targetRightPos = new Vector3(Mathf.Abs(transform.position.x + 2.0f), transform.position.y, transform.position.z);
                 transform.position = targetRightPos;
 
             } else {
@@ -240,7 +238,7 @@ namespace StudioByStorm.Scripts
         /*Detects if enemy moves off the right side of the screen*/
         protected bool outRightBounds()
         {
-            targetRightPos = new Vector3(transform.position.x - playerWidth * 2, transform.position.y, transform.position.z);
+            targetRightPos = new Vector3(transform.position.x - playerWidth - 2.0f, transform.position.y, transform.position.z);
             bool outta = (GameController.Instance.Camera.WorldToScreenPoint(targetRightPos).x > RightBounds);
             if (outta) {
                 currentFallTimer = initialFallTimer;
@@ -251,7 +249,7 @@ namespace StudioByStorm.Scripts
         /*Detects if enemy moves off the left side of the screen*/
         protected bool outLeftBounds()
         {
-            targetLeftPos = new Vector3(transform.position.x + playerWidth * 2, transform.position.y, transform.position.z);
+            targetLeftPos = new Vector3(transform.position.x + playerWidth, transform.position.y, transform.position.z);
             bool outta = (GameController.Instance.Camera.WorldToScreenPoint(targetLeftPos).x < LeftBounds);
             if (outta) {
                 currentFallTimer = initialFallTimer;

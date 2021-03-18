@@ -27,7 +27,7 @@ namespace MoreMountains.NiceVibrations
 
         protected virtual void Initialization()
         {
-            Application.targetFrameRate = 60;
+            //Application.targetFrameRate = 60;
             _paginations = new List<Pagination>();
             foreach (RectTransform page in Pages)
             {
