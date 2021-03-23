@@ -61,6 +61,11 @@ namespace StudioByStorm.Scripts
             return currentLevel;
         }
 
+        public int getCurrentScore()
+        {
+            return score;
+        }
+
         public void updateWaterTargetPosition(Vector3 target)
         {
             targetWaterPosition.y = target.y;

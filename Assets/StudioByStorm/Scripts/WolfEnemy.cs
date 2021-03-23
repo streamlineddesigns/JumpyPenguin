@@ -10,7 +10,7 @@ namespace StudioByStorm.Scripts
 
         //movement
         protected CharacterController controller;
-        protected float moveUp = 1.0f;
+        protected float moveUp = 2.0f;
         protected float waterOffset = 2.5f;
         public bool canPlayerMove;
 
@@ -24,6 +24,7 @@ namespace StudioByStorm.Scripts
         protected float gravityValue = -9.81f;
         protected float distToGround = 1.0f;
         public bool groundedPlayer;
+        protected float rayCastOffset = 0.5f;
 
         //State & Animation
         public GameObject Magic;
@@ -66,6 +67,7 @@ namespace StudioByStorm.Scripts
 
         void OnEnable()
         {
+            StopAllCoroutines();
             canEnableCheck();
             boxCollider.enabled = true;
             Magic.SetActive(false);
@@ -101,16 +103,13 @@ namespace StudioByStorm.Scripts
         // Update is called once per frame
         void Update()
         {
-            if (!bSwimming) {
+            if (FSM != State.Swim) {
                 BoundsChecking();
-            }
-
-            StateChangeListener();
-
-            groundedPlayer = IsGrounded();
-            if (groundedPlayer && playerVelocity.y < 0)
-            {
-                playerVelocity.y = 0f;
+                StateChangeListener();
+            } else {
+                if (anim.GetCurrentAnimatorClipInfo(0)[0].clip.name != "C_Swim") {
+                    anim.SetTrigger("Swim");
+                }
             }
 
             if (canPlayerMove && !bAttacking) {
@@ -131,14 +130,12 @@ namespace StudioByStorm.Scripts
                         move = new Vector3(horizontalMovement, 0, 0);
                     }
                     controller.Move(move * Time.deltaTime * swimSpeed);
-                } 
-            }
-
-            //Fall
-            if (FSM == State.Fall) {
-                playerVelocity.y += (gravityValue * 2.0f) * Time.deltaTime;
-                controller.Move(playerVelocity * Time.deltaTime);
-            }        
+                //Fall
+                } else if (FSM == State.Fall) {
+                    Vector3 move = new Vector3(horizontalMovement, (gravityValue / 1.5f), 0);
+                    controller.Move(move * Time.deltaTime * walkSpeed);
+                }  
+            }      
         }
 
         protected void BoundsChecking()
@@ -164,6 +161,9 @@ namespace StudioByStorm.Scripts
 
         protected void StateChangeListener()
         {
+            //check grounding
+            groundedPlayer = IsGrounded();
+
             //dead
             if (! bAlive) {
                 if (FSM != State.Dead) {
@@ -184,20 +184,21 @@ namespace StudioByStorm.Scripts
                     Magic.SetActive(false);
                 }
             //falling
-            } else if (! groundedPlayer && canPlayerMove && GameController.Instance.LevelController.getCurrentLevel() >= bWhatLevlAmI) {
+            } else if ((!groundedPlayer && !bSwimming) && canPlayerMove && GameController.Instance.LevelController.getCurrentLevel() >= bWhatLevlAmI) {
                 
                 if (currentFallTimer <= 0.0f) {
                     if (FSM != State.Fall) {
                         FSM = State.Fall;
                         anim.SetTrigger("Fall");
                         Magic.SetActive(false);
+                        currentFallTimer = initialFallTimer;
                     }
                 } else {
                     currentFallTimer -= Time.deltaTime;
                 }
 
             //running
-            } else if (GameController.Instance.LevelController.getCurrentLevel() >= bWhatLevlAmI) {
+            } else if (GameController.Instance.LevelController.getCurrentLevel() >= bWhatLevlAmI && (groundedPlayer && !bSwimming)) {
                 if (FSM != State.Run) {
                     FSM = State.Run;
                     anim.SetTrigger("Run");
@@ -214,7 +215,40 @@ namespace StudioByStorm.Scripts
 
         protected bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, distToGround);
+            bool rayCastFront;
+            bool rayCastCenter;
+
+            if (lastSpawnPosition == 0) {
+                rayCastCenter = Physics.Raycast(new Vector3(transform.position.x + rayCastOffset, transform.position.y, transform.position.z), Vector3.down, distToGround);//rayCastRight;
+                rayCastFront = Physics.Raycast(new Vector3(transform.position.x + rayCastOffset * 2.0f, transform.position.y, transform.position.z), Vector3.down, distToGround);//rayCastRight;
+            } else {
+                rayCastCenter = Physics.Raycast(new Vector3(transform.position.x - rayCastOffset, transform.position.y, transform.position.z), Vector3.down, distToGround);//rayCastLeft;
+                rayCastFront = Physics.Raycast(new Vector3(transform.position.x - rayCastOffset * 2.0f, transform.position.y, transform.position.z), Vector3.down, distToGround);//rayCastLeft;
+            }
+
+            if (!rayCastFront && !rayCastCenter) {
+                return false;
+            }
+
+            return true;
+
+
+
+
+            /*BEST YET
+            bool rayCastRight = Physics.Raycast(new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), Vector3.down, distToGround);
+            //bool rayCastAtPosition = Physics.Raycast(transform.position, Vector3.down, distToGround);
+            bool rayCastLeft = Physics.Raycast(new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), Vector3.down, distToGround);
+
+            bool targetRaycast;
+            if (lastSpawnPosition == 0) {
+                targetRaycast = rayCastRight;
+            } else {
+                targetRaycast = rayCastLeft;
+            }
+
+            return targetRaycast;
+            */
         }
 
         protected void Die()

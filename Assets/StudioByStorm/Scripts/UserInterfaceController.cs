@@ -4,56 +4,61 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UserInterfaceController : MonoBehaviour
+namespace StudioByStorm.Scripts
 {
-    public Text scoreText;
-    public GameObject PauseView;
-    public GameObject GameView;
-    public GameObject GameOverView;
-    public GameObject FrostView;
-
-    public void updateScore(int score)
+    public class UserInterfaceController : MonoBehaviour
     {
-        scoreText.text = score.ToString();
-    }
+        public Text scoreText;
+        public Text gameOverScoreText;
+        public GameObject PauseView;
+        public GameObject GameView;
+        public GameObject GameOverView;
+        public GameObject FrostView;
 
-    public void PauseGame()
-    {
-        GameView.SetActive(false);
-        PauseView.SetActive(true);
-        Time.timeScale = 0;
-    }
+        public void updateScore(int score)
+        {
+            scoreText.text = score.ToString();
+        }
 
-    public void ResumeGame()
-    {
-        PauseView.SetActive(false);
-        GameView.SetActive(true);
-        Time.timeScale = 1;
-    }
+        public void PauseGame()
+        {
+            GameView.SetActive(false);
+            PauseView.SetActive(true);
+            Time.timeScale = 0;
+        }
 
-    public void RestartGame()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
-    }
+        public void ResumeGame()
+        {
+            PauseView.SetActive(false);
+            GameView.SetActive(true);
+            Time.timeScale = 1;
+        }
 
-    public void GameOver()
-    {
-        GameView.SetActive(false);
-        PauseView.SetActive(false);
-        StartCoroutine(DelayedGameOver());
-    }
+        public void RestartGame()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
+        }
 
-    IEnumerator DelayedGameOver()
-    {
-        Time.timeScale = 1;
-        yield return new WaitForSeconds(3.0f);
-        GameOverView.SetActive(true);
-        Time.timeScale = 0;
-    }
+        public void GameOver()
+        {
+            GameView.SetActive(false);
+            PauseView.SetActive(false);
+            StartCoroutine(DelayedGameOver());
+        }
 
-    public void FrostCamera()
-    {
-        FrostView.SetActive(true);
+        IEnumerator DelayedGameOver()
+        {
+            Time.timeScale = 1;
+            yield return new WaitForSeconds(3.0f);
+            gameOverScoreText.text = GameController.Instance.LevelController.getCurrentScore().ToString();
+            GameOverView.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        public void FrostCamera()
+        {
+            FrostView.SetActive(true);
+        }
     }
 }

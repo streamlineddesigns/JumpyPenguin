@@ -10,6 +10,7 @@ namespace StudioByStorm.Scripts
         public List<GameObject> ObjectsToPool = new List<GameObject>();
         public List<GameObject> Pool = new List<GameObject>();
         public float lastSpawnPosition = 0;//0=left; 1=right;
+        private System.Random rng = new System.Random(); 
 
         void Awake()
         {
@@ -40,6 +41,8 @@ namespace StudioByStorm.Scripts
 
         public GameObject getAvailableEnemy()
         {
+            Shuffle(Pool);
+            
             int index = 0;
             GameObject enemy = null;
             
@@ -62,6 +65,18 @@ namespace StudioByStorm.Scripts
             }
 
             return enemy;
+        }
+
+        public void Shuffle(List<GameObject> list)  
+        {  
+            int n = list.Count;  
+            while (n > 1) {  
+                n--;  
+                int k = rng.Next(n + 1);  
+                GameObject value = list[k];  
+                list[k] = list[n];  
+                list[n] = value;  
+            }  
         }
 
     }
