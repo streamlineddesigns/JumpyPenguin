@@ -38,6 +38,8 @@ namespace StudioByStorm.Scripts
                         StartCoroutine(SlayEnemy());
                     }
                 }
+            } else if (other.tag == "Ice") {
+                GameController.Instance.GameOver(GameController.DeathType.Ice);
             }
         }
 

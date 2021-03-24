@@ -11,16 +11,23 @@ namespace StudioByStorm.Scripts
             EnemyDeath,
             PlayerJump,
             WaterSplash,
+            IcicleWall,
+            IceTrack,
+
         };
         //particles
         public GameObject EnemyDeathParticle;
         public GameObject PlayerJumpParticle;
         public GameObject WaterSplashParticle;
+        public GameObject IcicleWallParticle;
+        public GameObject IceTrackParticle;
 
         //pool
         protected List<GameObject> EnemyDeathParticlePool = new List<GameObject>();
         protected List<GameObject> PlayerJumpParticlePool = new List<GameObject>();
         protected List<GameObject> WaterSplashParticlePool = new List<GameObject>();
+        protected List<GameObject> IcicleWallParticlePool = new List<GameObject>();
+        protected List<GameObject> IceTrackParticlePool = new List<GameObject>();
 
         void Awake()
         {
@@ -40,6 +47,8 @@ namespace StudioByStorm.Scripts
             instantiateParticle(EnemyDeathParticle, EnemyDeathParticlePool);
             instantiateParticle(PlayerJumpParticle, PlayerJumpParticlePool);
             instantiateParticle(WaterSplashParticle, WaterSplashParticlePool);
+            instantiateParticle(IcicleWallParticle, IcicleWallParticlePool);
+            instantiateParticle(IceTrackParticle, IceTrackParticlePool);
         }
 
         protected void instantiateParticle(GameObject particleToAdd, List<GameObject> poolToAddTo)
@@ -70,6 +79,16 @@ namespace StudioByStorm.Scripts
                 case ParticleType.WaterSplash :
                     particle = _getAvailableParticle(WaterSplashParticlePool, particleType);
                     break;
+
+                //Ice Wall
+                case ParticleType.IcicleWall :
+                    particle = _getAvailableParticle(IcicleWallParticlePool, particleType);
+                    break;
+
+                //Ice Track
+                case ParticleType.IceTrack :
+                    particle = _getAvailableParticle(IceTrackParticlePool, particleType);
+                    break;
             }
 
             return particle;
@@ -81,7 +100,7 @@ namespace StudioByStorm.Scripts
             GameObject particle = null;
             
             while(index < pool.Count) {
-                if (pool[index].active == false) {
+                if (! pool[index].activeSelf) {
                     particle = pool[index];
                     break; 
                 }
@@ -102,6 +121,14 @@ namespace StudioByStorm.Scripts
                     //Water Splash
                     case ParticleType.WaterSplash :
                         instantiateParticle(WaterSplashParticle, WaterSplashParticlePool);
+                        break;
+                    //Ice Wall
+                    case ParticleType.IcicleWall :
+                        instantiateParticle(IcicleWallParticle, IcicleWallParticlePool);
+                        break;
+                    //Ice Track
+                    case ParticleType.IceTrack :
+                        instantiateParticle(IceTrackParticle, IceTrackParticlePool);
                         break;
                 }
                 particle = pool[pool.Count - 1];

@@ -33,6 +33,7 @@ namespace StudioByStorm.Scripts
         public enum DeathType {
             Enemy,
             Water,
+            Ice,
         };
         public bool bPlayerJumpOverride = false;
 

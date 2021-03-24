@@ -14228,6 +14228,10 @@ MonoBehaviour:
     type: 3}
   WaterSplashParticle: {fileID: 1434393670596540187, guid: 6d38149214d735646a4f1aa5e7a663cb,
     type: 3}
+  IcicleWallParticle: {fileID: 5510521092123308434, guid: e8cfb384620627d46beb96b849b214b2,
+    type: 3}
+  IceTrackParticle: {fileID: 5078706372073889447, guid: a5d9868c5f3554948901485c2da9c593,
+    type: 3}
 --- !u!1 &769984874
 GameObject:
   m_ObjectHideFlags: 0

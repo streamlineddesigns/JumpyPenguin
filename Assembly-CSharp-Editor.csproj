@@ -51,6 +51,7 @@
      <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Editor\CFX_InspectorHelpEditor.cs" />
      <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Editor\CFX_SpawnSystemEditor.cs" />
      <Compile Include="Assets\Purchased\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+     <Compile Include="Assets\Purchased\Magic Spells and Explosions\Editor\Particle_Mat_Overrider.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Editor\Menu\AnimUnhideTool.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Editor\Menu\MalbersMenu.cs" />
      <Compile Include="Assets\Purchased\Malbers Animations\Common\Scripts\Editor\Readme\ReadmeEditor.cs" />
@@ -713,9 +714,25 @@
       <Project>{7df24644-6c5e-ee04-8ecc-20fe7fd0fb02}</Project>
       <Name>Dypsloom.Shared.Utility</Name>
     </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{677d727a-5a19-2852-385e-818593cc8f5b}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{4e59d6b2-1b76-e74b-8477-63ee0173eeed}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeShare.Editor.csproj">
+      <Project>{8d602c37-b2bd-d9d7-99b3-ee1763e9f6e1}</Project>
+      <Name>NativeShare.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UniWebView-CSharp.Editor.csproj">
       <Project>{168874df-b636-abcb-ebe3-6baf8a5a4a74}</Project>
       <Name>UniWebView-CSharp.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{a7bbb923-9ff1-e60c-e97a-84dce5bce552}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.NiceVibrations.Haptics.csproj">
       <Project>{b10d7318-6914-86b1-aa66-3803ddd0fd96}</Project>
@@ -729,6 +746,10 @@
       <Project>{ce047cbe-b60f-30e6-b1ed-929d53a864d2}</Project>
       <Name>LeanCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="NativeShare.Runtime.csproj">
+      <Project>{36ddf07e-bc11-0dfa-3e72-ec7f8bd14028}</Project>
+      <Name>NativeShare.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="LeanTransition.csproj">
       <Project>{da25dbd0-b60c-a0df-15a6-ae40cca98c1a}</Project>
       <Name>LeanTransition</Name>
@@ -741,6 +762,10 @@
       <Project>{ad3854b0-4711-385a-83a3-4ab57dc74cc8}</Project>
       <Name>MoreMountains.NiceVibrations.Demos</Name>
     </ProjectReference>
+    <ProjectReference Include="CFXRDemoEditor.csproj">
+      <Project>{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}</Project>
+      <Name>CFXRDemoEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="LeanGUI.csproj">
       <Project>{870d0ee6-c026-df55-b313-eb3c13b5a25a}</Project>
       <Name>LeanGUI</Name>
@@ -748,22 +773,6 @@
     <ProjectReference Include="UniWebView-CSharp.csproj">
       <Project>{51cdbad1-0808-ed63-c22b-6862240f955b}</Project>
       <Name>UniWebView-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{677d727a-5a19-2852-385e-818593cc8f5b}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{4e59d6b2-1b76-e74b-8477-63ee0173eeed}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{a7bbb923-9ff1-e60c-e97a-84dce5bce552}</Project>
-      <Name>CFXRDemo</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemoEditor.csproj">
-      <Project>{b1da5fe4-31fc-d18e-0219-5e8d0ecfe17b}</Project>
-      <Name>CFXRDemoEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
