@@ -9422,6 +9422,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 490898538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &492050913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492050914}
+  m_Layer: 0
+  m_Name: ParticleContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &492050914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492050913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &495698998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3349842712546715419, guid: 028e01397e2c24e2d94b2da5d034a7d4,
@@ -14222,13 +14252,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3084c14954263a346ad398d954b17c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParticleContainer: {fileID: 492050913}
   EnemyDeathParticle: {fileID: 8104613743888810349, guid: 9a1c7198b91c9fb499d5ee0ec6f08631,
     type: 3}
   PlayerJumpParticle: {fileID: 4656049367676202180, guid: 2617a579d4edbd341bb6289906b3f7c1,
     type: 3}
   WaterSplashParticle: {fileID: 1434393670596540187, guid: 6d38149214d735646a4f1aa5e7a663cb,
     type: 3}
-  IcicleWallParticle: {fileID: 5510521092123308434, guid: e8cfb384620627d46beb96b849b214b2,
+  IcicleWallParticle: {fileID: 2689335036488649764, guid: 4d2eed183ccbc884c9ce714957def30b,
     type: 3}
   IceTrackParticle: {fileID: 5078706372073889447, guid: a5d9868c5f3554948901485c2da9c593,
     type: 3}
@@ -27502,7 +27533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1420247066 stripped
 GameObject:
@@ -35175,7 +35206,7 @@ Transform:
   - {fileID: 440197003}
   - {fileID: 768106579}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819522888
 GameObject:

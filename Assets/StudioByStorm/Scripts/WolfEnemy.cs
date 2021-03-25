@@ -16,7 +16,7 @@ namespace StudioByStorm.Scripts
 
         //Speed
         protected Vector3 playerVelocity;
-        protected float runSpeed = 10.0f;
+        protected float runSpeed = 12.0f;
         protected float walkSpeed = 3.0f;
         protected float swimSpeed = 3.0f;
 

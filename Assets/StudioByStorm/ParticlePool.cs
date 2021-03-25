@@ -7,6 +7,7 @@ namespace StudioByStorm.Scripts
     public class ParticlePool : MonoBehaviour
     {
         public static ParticlePool Singleton;
+        public GameObject ParticleContainer;
         public enum ParticleType {
             EnemyDeath,
             PlayerJump,
@@ -53,7 +54,7 @@ namespace StudioByStorm.Scripts
 
         protected void instantiateParticle(GameObject particleToAdd, List<GameObject> poolToAddTo)
         {
-            GameObject particle = Instantiate(particleToAdd, GameController.Instance.LevelController.LevelContainer.transform);
+            GameObject particle = Instantiate(particleToAdd, ParticleContainer.transform);
             particle.SetActive(false);
             poolToAddTo.Add(particle);
         }
@@ -67,27 +68,27 @@ namespace StudioByStorm.Scripts
             switch(particleType) {
                 //Enemy Death
                 case ParticleType.EnemyDeath :
-                    particle = _getAvailableParticle(EnemyDeathParticlePool, particleType);
+                    particle = _getAvailableParticle(EnemyDeathParticlePool, ParticleType.EnemyDeath);
                     break;
 
                 //Player Jump
                 case ParticleType.PlayerJump :
-                    particle = _getAvailableParticle(PlayerJumpParticlePool, particleType);
+                    particle = _getAvailableParticle(PlayerJumpParticlePool, ParticleType.PlayerJump);
                     break;
 
                 //Water Splash
                 case ParticleType.WaterSplash :
-                    particle = _getAvailableParticle(WaterSplashParticlePool, particleType);
+                    particle = _getAvailableParticle(WaterSplashParticlePool, ParticleType.WaterSplash);
                     break;
 
                 //Ice Wall
                 case ParticleType.IcicleWall :
-                    particle = _getAvailableParticle(IcicleWallParticlePool, particleType);
+                    particle = _getAvailableParticle(IcicleWallParticlePool, ParticleType.IcicleWall);
                     break;
 
                 //Ice Track
                 case ParticleType.IceTrack :
-                    particle = _getAvailableParticle(IceTrackParticlePool, particleType);
+                    particle = _getAvailableParticle(IceTrackParticlePool, ParticleType.IceTrack);
                     break;
             }
 
@@ -100,7 +101,7 @@ namespace StudioByStorm.Scripts
             GameObject particle = null;
             
             while(index < pool.Count) {
-                if (! pool[index].activeSelf) {
+                if (pool[index].active == false) {
                     particle = pool[index];
                     break; 
                 }
@@ -108,6 +109,7 @@ namespace StudioByStorm.Scripts
             }
 
             if (particle == null) {
+                //Debug.LogError("INSTANTIATING NEW PARTICLE");
                 //instantiate some new new and add to pool
                 switch(particleType) {
                     //Enemy Death

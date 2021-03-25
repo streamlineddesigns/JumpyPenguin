@@ -23,6 +23,9 @@ namespace StudioByStorm.Scripts
         public float bWhatLevlAmI;
         protected bool isInitialized = false;
 
+        public bool bCanHaveIce;
+        protected float lastEnemySpawned;
+
         void Awake()
         {
 
@@ -100,7 +103,7 @@ namespace StudioByStorm.Scripts
             }
 
             //if the players y position + the threshold distance is higher than the level y position, enable the level parts
-            if (GameController.Instance.Player.transform.position.y + thresholdDistance > gameObject.transform.position.y) {
+            if (! GameController.Instance.isGameOver && GameController.Instance.Player.transform.position.y + thresholdDistance > gameObject.transform.position.y) {
                 for (int i = 0; i < parts.Length; i++) {
                     parts[i].GetComponent<BoxCollider>().enabled = true;
                 }
@@ -126,11 +129,21 @@ namespace StudioByStorm.Scripts
 
         protected void SpawnEnemy()
         {
-            spawnedEnemy = EnemyPool.Singleton.getAvailableEnemy();
-            if (spawnedEnemy != null) {
-                spawnedEnemy.GetComponent<Enemy>().initFromLevel(objEnemySpawnPoints[0].transform.position, objEnemySpawnPoints[1].transform.position, bWhatLevlAmI);
-            } else {
-                StartCoroutine(SpawnIceWall());
+            if (lastEnemySpawned == 1 || !bCanHaveIce){
+                lastEnemySpawned = 0;
+
+                spawnedEnemy = EnemyPool.Singleton.getAvailableEnemy();
+                if (spawnedEnemy != null) {
+                    spawnedEnemy.GetComponent<Enemy>().initFromLevel(objEnemySpawnPoints[0].transform.position, objEnemySpawnPoints[1].transform.position, bWhatLevlAmI);
+                }
+                
+
+            } else if (lastEnemySpawned == 0) {
+                lastEnemySpawned = 1;
+
+                if (bCanHaveIce) {
+                    StartCoroutine(SpawnIceWall());
+                }
             }
         }
 
@@ -140,10 +153,10 @@ namespace StudioByStorm.Scripts
             spawnedIceWallParticle = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.IcicleWall);
             //if the ice wall isn't active or being used
             if (! spawnedIceWallParticle.activeSelf && spawnedIceWallParticle != null) {
-                bHasIceWall = true;
                 spawnedIceWallParticle.transform.SetParent(gameObject.transform);
-                spawnedIceWallParticle.transform.position = gameObject.transform.position;
+                spawnedIceWallParticle.transform.localPosition = new Vector3(0,0,0);
                 iceWallDespawnPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + despawnOffset, gameObject.transform.position.z);
+                bHasIceWall = true;
             } else {
                 resetIceWall();
             }

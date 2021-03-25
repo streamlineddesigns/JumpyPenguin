@@ -2135,6 +2135,7 @@ MonoBehaviour:
   - {fileID: 3940998728652928928}
   bDespawning: 0
   bWhatLevlAmI: 0
+  bCanHaveIce: 1
 --- !u!1 &5899098853939469004
 GameObject:
   m_ObjectHideFlags: 0

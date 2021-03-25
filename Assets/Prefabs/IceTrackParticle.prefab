@@ -38312,6 +38312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9102346323231774802}
   - component: {fileID: 3037914614311696034}
+  - component: {fileID: 2697724087383484948}
   m_Layer: 0
   m_Name: IceTrackParticle
   m_TagString: Untagged
@@ -38353,6 +38354,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2697724087383484948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078706372073889447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4e8510c1971be46974d5871490fe52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracks:
+  - {fileID: 7166874899738771516}
+  - {fileID: 2676766368824096325}
+  - {fileID: 8842824147211431863}
+  - {fileID: 9114983290791716126}
+  - {fileID: 5892796385664586521}
+  - {fileID: 2754378615577509441}
+  - {fileID: 3181921535407915539}
+  - {fileID: 1331321771236471354}
+  - {fileID: 4331101923486513488}
+  - {fileID: 2248031703656594212}
+  - {fileID: 4783070121325510923}
+  - {fileID: 5449075414787204163}
+  - {fileID: 3797172695518005160}
+  - {fileID: 7076868652173929770}
+  - {fileID: 6356128607048868717}
+  - {fileID: 7879379811780426233}
+  anim: {fileID: 3037914614311696034}
 --- !u!1 &5449075414787204163
 GameObject:
   m_ObjectHideFlags: 0

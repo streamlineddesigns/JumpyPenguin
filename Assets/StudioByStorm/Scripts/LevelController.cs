@@ -11,7 +11,7 @@ namespace StudioByStorm.Scripts
         protected int score = 0;
         public GameObject Water;
         protected Vector3 targetWaterPosition;
-        protected float waterSmoothing = 0.125f;
+        protected float waterSmoothing = 0.15f;
         protected Vector3 thresholdDistance = new Vector3(0,2.5f,0);
 
         //Levels

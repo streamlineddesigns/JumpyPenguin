@@ -7,9 +7,9 @@ namespace StudioByStorm.Scripts
     public class IcicleWall : MonoBehaviour
     {
         public List<GameObject> walls = new List<GameObject>();
-        protected GameObject iceTrack;
+        public GameObject iceTrack;
         protected float thresholdDistance = 1.1f;
-        protected float initialWaitTimer = 1.0f;
+        protected float initialWaitTimer = 0.8f;
         protected float currentWaitTimer;
         protected bool bCanEnable;
 
@@ -22,6 +22,8 @@ namespace StudioByStorm.Scripts
         void OnEnable()
         {
             currentWaitTimer = initialWaitTimer;
+            
+            //if (iceTrack != null) iceTrack.SetActive(false);
 
             if (GameController.Instance.isGameActive && (GameController.Instance.Player.transform.position.y + thresholdDistance > gameObject.transform.position.y)) {
                 spawnIceTrack();
@@ -32,8 +34,12 @@ namespace StudioByStorm.Scripts
 
         void OnDisable()
         {
-            if (iceTrack != null) iceTrack.SetActive(false);
+            currentWaitTimer = initialWaitTimer;
+            
             bCanEnable = false;
+            
+            //if (iceTrack != null) iceTrack.SetActive(false);
+
             for (int i = 0; i < walls.Count; i++) {
                 walls[i].SetActive(false);
             }
@@ -41,8 +47,9 @@ namespace StudioByStorm.Scripts
 
         protected void spawnIceTrack()
         {
-            iceTrack = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.IceTrack);
-            iceTrack.transform.position = gameObject.transform.position;
+            //iceTrack = ParticlePool.Singleton.getAvailableParticle(ParticlePool.ParticleType.IceTrack);
+            //iceTrack.transform.SetParent(gameObject.transform);
+            //iceTrack.transform.position = gameObject.transform.position;
             iceTrack.SetActive(true);
             bCanEnable = true;
         }
@@ -60,7 +67,8 @@ namespace StudioByStorm.Scripts
 
         protected void enableIcicles()
         {
-            iceTrack.SetActive(false);
+            //if (iceTrack != null) iceTrack.SetActive(false);
+
             for (int i = 0; i < walls.Count; i++) {
                 walls[i].SetActive(true);
             }

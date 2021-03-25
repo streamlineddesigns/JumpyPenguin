@@ -7,10 +7,10 @@ namespace StudioByStorm.Scripts
     public class SnowBreakable : MonoBehaviour
     {
         // Desired duration of the shake effect
-        protected float originalShakeDuration = 0.75f;
+        protected float originalShakeDuration = 0.4f;
         protected float shakeDuration;
         // Time til shake
-        protected float originalTimeTilShake = 0.25f;
+        protected float originalTimeTilShake = 0.1f;
         protected float timeTilShake;
         // A measure of magnitude for the shake. Tweak based on your preference
         protected float shakeMagnitude = 0.1f;
@@ -21,8 +21,25 @@ namespace StudioByStorm.Scripts
         //threshold distance
         protected float thresholdDistance = 0.75f;
 
+        //shrinks
+        protected Vector3 originalScale;
+        protected Vector3 targetScale;
+        protected float shrinkXStep;
+        protected float shrinkYStep;
+        protected float shrinkZStep;
+
         protected bool bBreak;
         protected bool bPlayerBrokeThreshold;
+
+        void Start()
+        {
+            originalScale = transform.localScale;
+            targetScale = originalScale;
+            shrinkXStep = (originalScale.x / 60.0f) / 0.25f;
+            shrinkYStep = (originalScale.y / 60.0f) / 0.25f;
+            shrinkZStep = (originalScale.z / 60.0f) / 0.25f;
+
+        }
 
         void OnDisable()
         {
@@ -31,7 +48,11 @@ namespace StudioByStorm.Scripts
 
         void OnEnable()
         {
-            initialPosition = transform.localPosition;
+            initialPosition = transform.localPosition;    
+            if (bBreak) {
+                transform.localScale = originalScale;
+                targetScale = originalScale;
+            }
             bBreak = false;
             bPlayerBrokeThreshold = false;
             shakeDuration = originalShakeDuration;
@@ -75,7 +96,14 @@ namespace StudioByStorm.Scripts
 
                     shakeDuration = 0f;
                     transform.localPosition = initialPosition;
-                    gameObject.SetActive(false);
+                    if (transform.localScale.x > 0.0f || transform.localScale.z > 0.0f) {
+                        targetScale.x -= shrinkXStep;
+                        targetScale.y -= shrinkYStep;
+                        targetScale.z -= shrinkZStep;
+                        transform.localScale = targetScale;
+                    } else {
+                        gameObject.SetActive(false);
+                    }
                     
                 }
             }
