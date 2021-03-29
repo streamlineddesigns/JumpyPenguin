@@ -1984,7 +1984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2225,7 +2225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jumpy Penguin
+  m_Text: Jumpi Pengui
 --- !u!222 &110893873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2681,7 +2681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5369,6 +5369,7 @@ MonoBehaviour:
   objEnemySpawnPoints: []
   bDespawning: 0
   bWhatLevlAmI: 0
+  bCanHaveIce: 0
 --- !u!95 &248349431
 Animator:
   serializedVersion: 3
@@ -6880,7 +6881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7936,7 +7937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21688,6 +21689,7 @@ MonoBehaviour:
   objEnemySpawnPoints: []
   bDespawning: 0
   bWhatLevlAmI: 0
+  bCanHaveIce: 0
 --- !u!1 &1165143447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3472789576895731020, guid: 028e01397e2c24e2d94b2da5d034a7d4,
@@ -28748,6 +28750,7 @@ MonoBehaviour:
   objEnemySpawnPoints: []
   bDespawning: 0
   bWhatLevlAmI: 0
+  bCanHaveIce: 0
 --- !u!1 &1491576719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3472789576895731020, guid: 028e01397e2c24e2d94b2da5d034a7d4,
@@ -28954,7 +28957,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jumpy Penguin
+  m_Text: Jumpi Pengui
 --- !u!222 &1496235962
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29125,7 +29128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39325,6 +39328,7 @@ MonoBehaviour:
   objEnemySpawnPoints: []
   bDespawning: 0
   bWhatLevlAmI: 0
+  bCanHaveIce: 0
 --- !u!95 &1966214905
 Animator:
   serializedVersion: 3
@@ -41407,7 +41411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43113,7 +43117,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4848215140148590751}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1

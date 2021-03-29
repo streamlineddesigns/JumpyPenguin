@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: ced8c37175216a74dbfb8a54f87b4f98
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BeakBottom
+    100002: BeakTop
+    100004: But
+    100006: But02
+    100008: CG
+    100010: Head
+    100012: L Calf
+    100014: L Clavicle
+    100016: L Finger
+    100018: L Foot
+    100020: L Forearm
+    100022: L Hand
+    100024: L Thigh
+    100026: L Toe0
+    100028: L Toe01
+    100030: L Toe1
+    100032: L Toe11
+    100034: L Toe2
+    100036: L Toe21
+    100038: L Toe3
+    100040: L Toe31
+    100042: L UpperArm
+    100044: LEyeLid
+    100046: LFeather1
+    100048: LFeather10
+    100050: LFeather1002
+    100052: LFeather102
+    100054: LFeather11
+    100056: LFeather1102
+    100058: LFeather12
+    100060: LFeather1202
+    100062: LFeather13
+    100064: LFeather1302
+    100066: LFeather14
+    100068: LFeather1402
+    100070: LFeather15
+    100072: LFeather1502
+    100074: LFeather16
+    100076: LFeather1602
+    100078: LFeather2
+    100080: LFeather202
+    100082: LFeather3
+    100084: LFeather302
+    100086: LFeather4
+    100088: LFeather402
+    100090: LFeather5
+    100092: LFeather502
+    100094: LFeather6
+    100096: LFeather602
+    100098: LFeather7
+    100100: LFeather702
+    100102: LFeather8
+    100104: LFeather802
+    100106: LFeather9
+    100108: LFeather902
+    100110: LTail01
+    100112: LTail02
+    100114: LTail03
+    100116: LTail04
+    100118: LTail05
+    100120: Neck
+    100122: Pelvis
+    100124: R Calf
+    100126: R Clavicle
+    100128: R Finger
+    100130: R Foot
+    100132: R Forearm
+    100134: R Hand
+    100136: R Thigh
+    100138: R Toe0
+    100140: R Toe01
+    100142: R Toe1
+    100144: R Toe11
+    100146: R Toe2
+    100148: R Toe21
+    100150: R Toe3
+    100152: R Toe31
+    100154: R UpperArm
+    100156: //RootNode
+    100158: Raven LOD0
+    100160: Raven LOD1
+    100162: Raven LOD2
+    100164: REyeLid
+    100166: RFeather1
+    100168: RFeather10
+    100170: RFeather1002
+    100172: RFeather102
+    100174: RFeather11
+    100176: RFeather1102
+    100178: RFeather12
+    100180: RFeather1202
+    100182: RFeather13
+    100184: RFeather1302
+    100186: RFeather14
+    100188: RFeather1402
+    100190: RFeather15
+    100192: RFeather1502
+    100194: RFeather16
+    100196: RFeather1602
+    100198: RFeather2
+    100200: RFeather202
+    100202: RFeather3
+    100204: RFeather302
+    100206: RFeather4
+    100208: RFeather402
+    100210: RFeather5
+    100212: RFeather502
+    100214: RFeather6
+    100216: RFeather602
+    100218: RFeather7
+    100220: RFeather702
+    100222: RFeather8
+    100224: RFeather802
+    100226: RFeather9
+    100228: RFeather902
+    100230: RTail01
+    100232: RTail02
+    100234: RTail03
+    100236: RTail04
+    100238: RTail05
+    100240: Small Feathers
+    100242: Spine
+    100244: Spine1
+    100246: Tail Center
+    100248: Throat
+    100250: Tongue
+    400000: BeakBottom
+    400002: BeakTop
+    400004: But
+    400006: But02
+    400008: CG
+    400010: Head
+    400012: L Calf
+    400014: L Clavicle
+    400016: L Finger
+    400018: L Foot
+    400020: L Forearm
+    400022: L Hand
+    400024: L Thigh
+    400026: L Toe0
+    400028: L Toe01
+    400030: L Toe1
+    400032: L Toe11
+    400034: L Toe2
+    400036: L Toe21
+    400038: L Toe3
+    400040: L Toe31
+    400042: L UpperArm
+    400044: LEyeLid
+    400046: LFeather1
+    400048: LFeather10
+    400050: LFeather1002
+    400052: LFeather102
+    400054: LFeather11
+    400056: LFeather1102
+    400058: LFeather12
+    400060: LFeather1202
+    400062: LFeather13
+    400064: LFeather1302
+    400066: LFeather14
+    400068: LFeather1402
+    400070: LFeather15
+    400072: LFeather1502
+    400074: LFeather16
+    400076: LFeather1602
+    400078: LFeather2
+    400080: LFeather202
+    400082: LFeather3
+    400084: LFeather302
+    400086: LFeather4
+    400088: LFeather402
+    400090: LFeather5
+    400092: LFeather502
+    400094: LFeather6
+    400096: LFeather602
+    400098: LFeather7
+    400100: LFeather702
+    400102: LFeather8
+    400104: LFeather802
+    400106: LFeather9
+    400108: LFeather902
+    400110: LTail01
+    400112: LTail02
+    400114: LTail03
+    400116: LTail04
+    400118: LTail05
+    400120: Neck
+    400122: Pelvis
+    400124: R Calf
+    400126: R Clavicle
+    400128: R Finger
+    400130: R Foot
+    400132: R Forearm
+    400134: R Hand
+    400136: R Thigh
+    400138: R Toe0
+    400140: R Toe01
+    400142: R Toe1
+    400144: R Toe11
+    400146: R Toe2
+    400148: R Toe21
+    400150: R Toe3
+    400152: R Toe31
+    400154: R UpperArm
+    400156: //RootNode
+    400158: Raven LOD0
+    400160: Raven LOD1
+    400162: Raven LOD2
+    400164: REyeLid
+    400166: RFeather1
+    400168: RFeather10
+    400170: RFeather1002
+    400172: RFeather102
+    400174: RFeather11
+    400176: RFeather1102
+    400178: RFeather12
+    400180: RFeather1202
+    400182: RFeather13
+    400184: RFeather1302
+    400186: RFeather14
+    400188: RFeather1402
+    400190: RFeather15
+    400192: RFeather1502
+    400194: RFeather16
+    400196: RFeather1602
+    400198: RFeather2
+    400200: RFeather202
+    400202: RFeather3
+    400204: RFeather302
+    400206: RFeather4
+    400208: RFeather402
+    400210: RFeather5
+    400212: RFeather502
+    400214: RFeather6
+    400216: RFeather602
+    400218: RFeather7
+    400220: RFeather702
+    400222: RFeather8
+    400224: RFeather802
+    400226: RFeather9
+    400228: RFeather902
+    400230: RTail01
+    400232: RTail02
+    400234: RTail03
+    400236: RTail04
+    400238: RTail05
+    400240: Small Feathers
+    400242: Spine
+    400244: Spine1
+    400246: Tail Center
+    400248: Throat
+    400250: Tongue
+    4300000: Small Feathers
+    4300002: Raven LOD1
+    4300004: Raven LOD2
+    4300006: Raven LOD0
+    9500000: //RootNode
+    13700000: Raven LOD0
+    13700002: Raven LOD1
+    13700004: Raven LOD2
+    13700006: Small Feathers
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - CG
+    - CG/Pelvis/Spine
+    - CG/Pelvis/Spine/Spine1/Neck/Head
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 111
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: CG
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

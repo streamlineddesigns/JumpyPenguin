@@ -170,6 +170,7 @@
      <Compile Include="Assets\StudioByStorm\ParticlePool.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\AudioController.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\CameraController.cs" />
+     <Compile Include="Assets\StudioByStorm\Scripts\DeformableSnow.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\Enemy.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\EnemyPool.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\GameController.cs" />
