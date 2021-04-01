@@ -10,6 +10,8 @@ public class AudioController : MonoBehaviour
     public AudioSource WaterSplash;
     public AudioSource WolfAttack;
     public AudioSource EnemyDeath;
+    public AudioSource GrumblingSound;
+    public AudioSource KnockOutSound;
     public List<AudioSource> SnowWalkingSounds = new List<AudioSource>();
     protected bool isWalkingSoundPlaying;
 
@@ -83,5 +85,15 @@ public class AudioController : MonoBehaviour
     public void PlayEnemyDeathSound()
     {
         if (! EnemyDeath.isPlaying) EnemyDeath.Play();
+    }
+
+    public void PlayGrumblingSound()
+    {
+        if (! GrumblingSound.isPlaying) GrumblingSound.Play();
+    }
+
+    public void PlayKnockOutSound()
+    {
+        if (! KnockOutSound.isPlaying) KnockOutSound.Play();
     }
 }

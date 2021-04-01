@@ -95,6 +95,21 @@ namespace StudioByStorm.Scripts
             ShowDizzyEffect();
         }
 
+        public void KnockOut()
+        {
+            playerAnim.SetBool("Die", true);
+            ShowDizzyEffect();
+            AudioController.Singleton.PlayKnockOutSound();
+        }
+
+        public void WakeUp()
+        {
+            playerAnim.SetBool("Die", false);
+            HideDizzyEffect();
+            JumpOverride();
+            AudioController.Singleton.PlayJumpSound();
+        }
+
         public void ShowDizzyEffect()
         {
             dizzyEffect.SetActive(true);

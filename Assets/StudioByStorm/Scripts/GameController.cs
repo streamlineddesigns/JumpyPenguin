@@ -14,6 +14,8 @@ namespace StudioByStorm.Scripts
         protected float LeftBounds;
         protected Vector3 targetRightPos;
         protected Vector3 targetLeftPos;
+        public GameObject SplashView;
+        public GameObject FTUE;
         public GameObject StartView;
         public GameObject GameView;
         public Animator PlatformRiseAnimator;
@@ -49,7 +51,11 @@ namespace StudioByStorm.Scripts
 
         void Start()
         {
-
+            if (ZPlayerPrefs.GetInt("InGameFTUE") == 1) {
+                SplashView.SetActive(true);
+            } else {
+                FTUE.SetActive(true);
+            }
         }
 
         // Update is called once per frame
@@ -89,6 +95,11 @@ namespace StudioByStorm.Scripts
             GameView.SetActive(true);
             _isGameActive = true;
             LevelController.spawnNewLevel();
+        }
+
+        public void FTUEStart()
+        {
+            _isGameActive = true;
         }
 
         protected bool outRightBounds()

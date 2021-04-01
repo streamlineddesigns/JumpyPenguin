@@ -15,6 +15,22 @@ namespace StudioByStorm.Scripts
         protected float targetDistance;
 
 
+        // Desired duration of the shake effect
+        protected float originalShakeDuration = 2.0f;
+        protected float shakeDuration;
+        // Time til shake
+        protected float originalTimeTilShake = 0.1f;
+        protected float timeTilShake;
+        // A measure of magnitude for the shake. Tweak based on your preference
+        protected float shakeMagnitude = 0.1f;
+        // A measure of how quickly the shake effect should evaporate
+        protected float dampingSpeed = 1.0f;
+        // The initial position of the GameObject
+        protected Vector3 initialPosition;
+        //if shake
+        public bool bShake;
+
+
         void Start ()
         {
             //calculate zoom out time
@@ -24,6 +40,9 @@ namespace StudioByStorm.Scripts
             target = GameController.Instance.Player.transform;
             // Calculate the initial offset.
             offset = transform.position - target.position;
+
+            initialPosition = transform.position;    
+            resetShake();
         }
 
 
@@ -43,11 +62,40 @@ namespace StudioByStorm.Scripts
                 // Smoothly interpolate between the camera's current position and it's target position.
                 transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
             }
+
+
+            if (bShake) {
+                if (shakeDuration > 0) {
+
+                    if (timeTilShake <= 0) {
+                        transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
+                        shakeDuration -= Time.deltaTime * dampingSpeed;
+                    } else {
+                        timeTilShake -= Time.deltaTime;
+                    }
+
+                } else {
+                    resetShake();
+                }
+            }
         }
 
         public Vector3 getOffset()
         {
             return offset;
+        }
+
+        public void Shake()
+        {
+            bShake = true;
+        }
+
+        protected void resetShake()
+        {
+            bShake = false;
+            transform.position = initialPosition;
+            shakeDuration = originalShakeDuration;
+            timeTilShake = originalTimeTilShake;
         }
     }
 }
