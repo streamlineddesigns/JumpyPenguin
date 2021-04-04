@@ -10,10 +10,11 @@ public class SplashView : MonoBehaviour
     protected float increment = (1.0f / 60.0f) / 1.0f;
     public Animation fadeOutView;
     public Animation fadeOutPenguin;
+    public bool bFadeOutPenguinByScale;
     protected bool bPlayedFirstAnimation;
     protected bool bPlayedSecondAnimation;
 
-    public GameObject StartView;
+    public GameObject ObjectToActivate;
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +35,13 @@ public class SplashView : MonoBehaviour
 
             } else if (! fadeOutView.isPlaying && bPlayedFirstAnimation) {
 
-                if (! fadeOutPenguin.isPlaying && !bPlayedSecondAnimation) {
+                if (bFadeOutPenguinByScale && ! fadeOutPenguin.isPlaying && !bPlayedSecondAnimation) {
 
                     fadeOutPenguin.Play();
                     bPlayedSecondAnimation = true;
 
-                } else if (! fadeOutPenguin.isPlaying && bPlayedSecondAnimation) {
-                    StartView.SetActive(true);
+                } else if (! bFadeOutPenguinByScale || (! fadeOutPenguin.isPlaying && bPlayedSecondAnimation)) {
+                    ObjectToActivate.SetActive(true);
                     gameObject.SetActive(false);
                 }
 

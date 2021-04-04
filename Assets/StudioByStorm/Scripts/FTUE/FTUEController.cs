@@ -17,6 +17,7 @@ namespace StudioByStorm.Scripts.FTUE
         public GameObject mainCamera;
         public GameObject secondaryCamera;
         public GameObject fadeOutPanel;
+        public GameObject dialog;
 
         protected float elapsedSyncTime = 3.0f;
 
@@ -108,7 +109,6 @@ namespace StudioByStorm.Scripts.FTUE
             currentEarthColor = initialEarthColor;
             colorRStep = (targetEarthColor.r - initialEarthColor.r) / (60.0f * timeTilColor);
             colorGStep = (targetEarthColor.g - initialEarthColor.g) / (60.0f * timeTilColor);
-            setEarthColor();
 
             //earth atmosphere mat
             currentAtmosphereColor = initialAtmosphereColor;
@@ -161,6 +161,7 @@ namespace StudioByStorm.Scripts.FTUE
 
         protected IEnumerator typeWriterAnimation()
         {
+            dialog.SetActive(true);
             initialText.gameObject.SetActive(true);
             initialText.text = "";
 

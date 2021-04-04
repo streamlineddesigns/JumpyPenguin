@@ -22,13 +22,14 @@ namespace StudioByStorm.Scripts
 
         //Weather
         public GameObject Snow;
+        public Vector3 SnowTargetPosition;
         protected float snowOffset = 30.0f;
 
         // Start is called before the first frame update
         void Start()
         {
             targetWaterPosition = Water.transform.position;
-            UpdateSnowPosition();
+            UpdateSnowTargetPosition();
         }
 
         // Update is called once per frame
@@ -37,6 +38,8 @@ namespace StudioByStorm.Scripts
             if (! GameController.Instance.isGameActive) {
                 return;
             }
+
+            UpdateSnowPosition();
 
             //use highest level position to set new target water position. TODO
             if (currentLevel > 0 && ((Water.transform.position + thresholdDistance).y < highestLevelPosition.y)) {
@@ -76,7 +79,7 @@ namespace StudioByStorm.Scripts
             currentHighestLevel += 1;
             highestLevelPosition.y += levelSpacing;
 
-            UpdateSnowPosition();
+            UpdateSnowTargetPosition();
 
             GameObject level = LevelPool.Singleton.getAvailableLevel();
             level.transform.position = highestLevelPosition;
@@ -104,7 +107,12 @@ namespace StudioByStorm.Scripts
 
         protected void UpdateSnowPosition()
         {
-            Snow.transform.position = new Vector3(Snow.transform.position.x, highestLevelPosition.y + snowOffset, Snow.transform.position.z);
+            Snow.transform.position = Vector3.Lerp(Snow.transform.position, SnowTargetPosition, 0.01f);
+        }
+
+        protected void UpdateSnowTargetPosition()
+        {
+            SnowTargetPosition = new Vector3(0, highestLevelPosition.y + snowOffset, 0);
         }
     }
 

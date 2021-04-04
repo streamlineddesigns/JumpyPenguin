@@ -7,6 +7,22 @@ namespace StudioByStorm.Scripts
 {
     public class InGameFTUEController : MonoBehaviour
     {   
+        public GameObject FadePanel;
+        public GameObject KnockOutPanel;
+
+        //Sun animation stuff
+        protected float sunAnimationTime = 3.0f;
+        protected bool bSunAnimationPlayed = false;
+        protected bool bSolarFlareTriggered = false;
+        protected bool bCameraFirstTargetReached = false;
+        protected bool bCameraSecondTargetReached = false;
+
+        public GameObject Sun;
+        public GameObject Camera;
+        protected Quaternion CameraInitialRotation;
+        public Animator SunAnimator;
+
+        //water stuff
         public GameObject water;
         public GameObject waterStartPosition;
         protected Vector3 waterEndPosition;
@@ -19,13 +35,20 @@ namespace StudioByStorm.Scripts
         public CameraController cameraController;
         public PlayerController playerController;
 
+        //intro text animation
+        protected float introTextAnimationDelay = 2.0f;//the initial delay after scene loads 
+        public Text introText;
+        protected char[] introTextChars;
+        protected bool bIntroTextAnimationPlayed = false;
+        protected bool bIntroTextAnimationPlaying = false;
+
         //iceberg animation
-        protected float iceBergAnimationDelayTime = 0.5f;
+        protected float iceBergAnimationDelayTime = 0.5f;//the intial delay after text animation
         protected bool iceBergAnimationPlayed = false;
         protected bool bCameraShook = false;
 
         //player knockout animation
-        protected float playerKnockoutAnimationDelayTime = 1.0f;
+        protected float playerKnockoutAnimationDelayTime = 1.0f;//the delay until player knockout.. should be after icebergdelay
         protected bool bPlayerKnockoutAnimationPlayed = false;
 
         //player wakeup animation
@@ -49,6 +72,10 @@ namespace StudioByStorm.Scripts
 
         public void Start()
         {
+            FadePanel.SetActive(true);
+
+            CameraInitialRotation = Camera.transform.rotation;
+
             waterEndPosition = water.transform.position;
             icebergEndPosition = iceberg.transform.position;
             icebergEndPosition.y = 0.0f;
@@ -57,7 +84,7 @@ namespace StudioByStorm.Scripts
             water.transform.position = waterStartPosition.transform.position;
             iceberg.transform.position = icebergStartPosition.transform.position;
 
-
+            introTextChars = introText.text.ToCharArray();
             firstTextChars = firstText.text.ToCharArray();
             secondTextChars = secondText.text.ToCharArray();
             thirdTextChars = thirdText.text.ToCharArray();
@@ -65,6 +92,37 @@ namespace StudioByStorm.Scripts
 
         public void Update()
         {
+            //intro text animation
+            if (! bIntroTextAnimationPlayed || bIntroTextAnimationPlaying) {
+                if (! bIntroTextAnimationPlaying) {
+                    if (introTextAnimationDelay > 0.0f) {
+                        introTextAnimationDelay -= Time.deltaTime;
+                    } else {
+                        bIntroTextAnimationPlaying = true;
+                        StartCoroutine(introTextAnimation());
+                    }
+                }
+                return;
+            }
+
+            //Sun animation
+            if (!bSunAnimationPlayed) {
+                playSunAnimation();
+                return;
+            }
+
+            //Second camera target animation
+            if (!bCameraSecondTargetReached) {
+                if (Camera.transform.rotation != CameraInitialRotation) {
+                    Camera.transform.rotation = Quaternion.Slerp(Camera.transform.rotation, CameraInitialRotation, Time.deltaTime * 3.0f);
+                } else {
+                    bCameraSecondTargetReached = true;
+                    Vector3 LevelContainerTargetPos = GameController.Instance.LevelController.LevelContainer.transform.position;
+                    LevelContainerTargetPos.z = 0.0f;
+                    GameController.Instance.LevelController.LevelContainer.transform.position = LevelContainerTargetPos;
+                }   
+            }
+
             //iceberg animation
             if (!iceBergAnimationPlayed) {
                 playIceBergAnimation();
@@ -88,6 +146,7 @@ namespace StudioByStorm.Scripts
                     if (textAnimationDelayTime > 0.0f) {
                         textAnimationDelayTime -= Time.deltaTime;
                     } else {
+                        FadePanel.SetActive(false);
                         bTextAnimationPlaying = true;
                         StartCoroutine(textAnimation());
                     }
@@ -96,6 +155,36 @@ namespace StudioByStorm.Scripts
             }
 
             FTUEOver();
+        }
+
+        protected void playSunAnimation()
+        {
+            if (!bCameraFirstTargetReached) {
+                var modifiedSunPosition = Sun.transform.position;
+                modifiedSunPosition.y = Sun.transform.position.y - 100.0f;
+                var lookPos = modifiedSunPosition - Camera.transform.position;
+                var targetRotation = Quaternion.LookRotation(lookPos);
+      
+                if (Camera.transform.rotation != targetRotation) {
+                    Camera.transform.rotation = Quaternion.Slerp(Camera.transform.rotation, targetRotation, Time.deltaTime * 3.0f);
+                } else {
+                    bCameraFirstTargetReached = true;
+                }   
+
+                return;
+            }
+
+            if (!bSolarFlareTriggered) {
+                bSolarFlareTriggered = true;
+                SunAnimator.SetTrigger("flare");
+            }
+
+            if (sunAnimationTime > 0.0f) {
+                sunAnimationTime -= Time.deltaTime;
+                return;
+            }
+
+            bSunAnimationPlayed = true;
         }
 
         protected void playIceBergAnimation()
@@ -128,6 +217,7 @@ namespace StudioByStorm.Scripts
                 bPlayerKnockoutAnimationPlayed = true;
                 GameController.Instance.FTUEStart();
                 playerController.KnockOut();
+                KnockOutPanel.SetActive(true);
             }
         }
 
@@ -139,7 +229,30 @@ namespace StudioByStorm.Scripts
             } else {
                 bPlayerWakeUpAnimationPlayed = true;
                 playerController.WakeUp();
+                KnockOutPanel.SetActive(false);
             }
+        }
+
+        protected IEnumerator introTextAnimation()
+        {
+            dialog.SetActive(true);
+            currentText.text = "";
+            currentTextString = "";
+            currentText.gameObject.SetActive(true);
+
+            foreach (char letter in introTextChars)
+            {
+                typeWriterSound.Play();
+                currentTextString += letter;
+                currentText.text = currentTextString;      
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            yield return new WaitForSeconds(2.0f);
+
+            dialog.SetActive(false);
+            bIntroTextAnimationPlayed = true;
+            bIntroTextAnimationPlaying = false;
         }
 
         protected IEnumerator textAnimation()
@@ -189,6 +302,7 @@ namespace StudioByStorm.Scripts
 
         protected void FTUEOver()
         {
+            Sun.SetActive(false);
             gameObject.SetActive(false);
             GameController.Instance.PlayGameButtonClick();
         }

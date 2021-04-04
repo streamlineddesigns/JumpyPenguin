@@ -61,6 +61,10 @@ namespace StudioByStorm.Scripts
         // Update is called once per frame
         void Update()
         {
+            if (! isGameActive) {
+                return;
+            }
+
             if (outRightBounds()) {
 
                 canPlayerMove = false;
