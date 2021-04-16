@@ -109,6 +109,7 @@ namespace StudioByStorm.Scripts.FTUE
             currentEarthColor = initialEarthColor;
             colorRStep = (targetEarthColor.r - initialEarthColor.r) / (60.0f * timeTilColor);
             colorGStep = (targetEarthColor.g - initialEarthColor.g) / (60.0f * timeTilColor);
+            setEarthColor();
 
             //earth atmosphere mat
             currentAtmosphereColor = initialAtmosphereColor;

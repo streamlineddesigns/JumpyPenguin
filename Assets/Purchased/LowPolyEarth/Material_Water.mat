@@ -84,7 +84,7 @@ Material:
     - _ReceiveShadows: 0
     - _Shininess: 0
     - _Smoothness: 0
-    - _SmoothnessSource: 1
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
     - _SpecularHighlights: 1
@@ -96,7 +96,7 @@ Material:
     - _BaseColor: {r: 0, g: 0.7931032, b: 1, a: 0}
     - _Color: {r: 0, g: 0.7931032, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0.33962262, b: 0.33962262, a: 1}
-    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecColor: {r: 0, g: 0.5254902, b: 2, a: 0}
 --- !u!114 &6796508731164170363
 MonoBehaviour:
   m_ObjectHideFlags: 11

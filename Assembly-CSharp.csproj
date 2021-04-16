@@ -100,6 +100,7 @@
      <Compile Include="Assets\Dypsloom\DypThePenguin\Scripts\UI\HealthMonitor.cs" />
      <Compile Include="Assets\Dypsloom\DypThePenguin\Scripts\UI\ItemHotbar.cs" />
      <Compile Include="Assets\Dypsloom\DypThePenguin\Scripts\UI\ItemHotbarSlotBox.cs" />
+     <Compile Include="Assets\PSD Logo Templates\Sample\IconPreview.cs" />
      <Compile Include="Assets\Purchased\FlatKit\Demos\Common\Scripts\Motion\CameraMouseOrbit.cs" />
      <Compile Include="Assets\Purchased\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
      <Compile Include="Assets\Purchased\FlatKit\Scripts\UvScroller.cs" />
@@ -215,6 +216,7 @@
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
      <None Include="Assets\Purchased\Snow Particles\Shaders\Particle Alpha Blend +Shadow.shader" />
      <None Include="Assets\Purchased\NiceVibrations\OlderVersions\v2.0.1\NiceVibrations-v-2-0-1-readme.txt" />
+     <None Include="Assets\PSD Logo Templates\Fonts\Passion_One\OFL.txt" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Color4x4.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask4Toon.shader" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_CardSimple.shader" />
@@ -255,6 +257,7 @@
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_Sky.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\AnisotropicCircular.shader" />
+     <None Include="Assets\PSD Logo Templates\Fonts\Lilita_One\OFL.txt" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
      <None Include="Assets\Purchased\ZFrame\Readme\readme_ZPlayerPrefs.txt" />
@@ -293,6 +296,7 @@
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Purchased\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\Resources\FlatKitOutline.shader" />
      <None Include="Assets\Purchased\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
+     <None Include="Assets\PSD Logo Templates\Fonts\Changa_One\OFL.txt" />
      <None Include="Assets\Purchased\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Purchased\FlatKit\[Render Pipeline] URP\RenderFeatures\Fog\Resources\FlatKitFog.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
@@ -301,6 +305,7 @@
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Purchased\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Shaders\Mask8Realistic.shader" />
+     <None Include="Assets\PSD Logo Templates\Fonts\Baloo\OFL.txt" />
      <None Include="Assets\Purchased\Magic Spells and Explosions\Shaders\Rimlight.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Purchased\Malbers Animations\Common\Fonts\OpenSans\License!.txt" />

@@ -303,8 +303,9 @@ namespace StudioByStorm.Scripts
         protected void FTUEOver()
         {
             Sun.SetActive(false);
-            gameObject.SetActive(false);
             GameController.Instance.PlayGameButtonClick();
+            ZPlayerPrefs.SetInt("InGameFTUE", 1);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace StudioByStorm.Scripts
     {
         public static GameController Instance;
         public GameObject Player;
+        public GameObject Sun;
         public Camera Camera;
         protected float playerWidth = 1.3f;
         protected float RightBounds;
@@ -53,9 +54,18 @@ namespace StudioByStorm.Scripts
         {
             if (ZPlayerPrefs.GetInt("InGameFTUE") == 1) {
                 SplashView.SetActive(true);
+                InitGameWorld();
             } else {
                 FTUE.SetActive(true);
             }
+        }
+
+        void InitGameWorld()
+        {
+            Sun.SetActive(false);
+            Vector3 LevelContainerTargetPos = GameController.Instance.LevelController.LevelContainer.transform.position;
+            LevelContainerTargetPos.z = 0.0f;
+            GameController.Instance.LevelController.LevelContainer.transform.position = LevelContainerTargetPos;
         }
 
         // Update is called once per frame
