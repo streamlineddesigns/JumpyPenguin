@@ -341,7 +341,6 @@
      <None Include="Assets\Purchased\IL3DN\Shaders\IL3DN_OpaqueSurface.shader" />
      <None Include="Assets\Purchased\NiceVibrations\license.txt" />
      <None Include="Assets\Dypsloom\DypThePenguin\Demo\Material\Shaders\Shader_Crystal.shader" />
-     <None Include="Assets\ToDoNew.txt" />
      <None Include="Assets\Purchased\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\Purchased\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\StudioByStorm\Scripts\TODO.txt" />

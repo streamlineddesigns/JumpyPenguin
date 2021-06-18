@@ -35,6 +35,9 @@ namespace StudioByStorm.Scripts
         protected Vector3 targetRightPos;
         protected Vector3 targetLeftPos;
 
+
+        protected bool bGroundObjectsSwitch = false;
+
         void Awake()
         {
 
@@ -83,6 +86,8 @@ namespace StudioByStorm.Scripts
             }*/
             
             resetIceWall();
+
+            bGroundObjectsSwitch = false;
         }
 
         void OnEnable()
@@ -93,7 +98,10 @@ namespace StudioByStorm.Scripts
                 SpawnEnemy();
             }
 
-            if (isInitialized && GameController.Instance != null && GameController.Instance.isGameActive) GameController.Instance.LevelController.GroundObjectsController.DetermineGroundObjects(BlocksWithinBounds);
+            if (!bGroundObjectsSwitch && isInitialized && GameController.Instance != null && GameController.Instance.isGameActive) {
+                bGroundObjectsSwitch = true;
+                StartCoroutine(GameController.Instance.LevelController.GroundObjectsController.DetermineGroundObjects(BlocksWithinBounds));
+            }
         }
 
         // Update is called once per frame

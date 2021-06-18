@@ -20709,6 +20709,11 @@ MonoBehaviour:
   - {fileID: 4289017312399028655, guid: 66b8ab311c2a7d14188550655e7aa10b, type: 3}
   - {fileID: 4005035802629200363, guid: 219ef7916a04a9a4698c2479d4c4fb0a, type: 3}
   - {fileID: 7714015184703531969, guid: 61d304cc83f974249bb5555dec836655, type: 3}
+  - {fileID: 1219471545100730, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
+  - {fileID: 1219471545100730, guid: cf643fc4293ffad47a4e05e6d28686fa, type: 3}
+  - {fileID: 3994308237309627483, guid: 7b064d41e49113148b049ef2c121ea88, type: 3}
+  frontOffset: -3
+  backOffset: 3
 --- !u!1 &968859821
 GameObject:
   m_ObjectHideFlags: 0
@@ -47490,6 +47495,11 @@ PrefabInstance:
     - target: {fileID: 4562075604489022, guid: 802f0bb6c128b53459d4904fc056d666, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23007987366238138, guid: 802f0bb6c128b53459d4904fc056d666,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65910483985868152, guid: 802f0bb6c128b53459d4904fc056d666,
         type: 3}

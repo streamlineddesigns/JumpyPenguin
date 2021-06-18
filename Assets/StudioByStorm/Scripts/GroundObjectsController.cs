@@ -34,6 +34,10 @@ namespace StudioByStorm.Scripts
 
         protected System.Random rando = new System.Random();
 
+        //For scenery
+        protected bool bLastScenerySpawnedInFront = false;
+        protected float sceneryOffset = 3.0f;
+
         public void Awake()
         {
             GenerateRegistry();
@@ -95,25 +99,34 @@ namespace StudioByStorm.Scripts
             return block;
         }
 
+        //NOTE: Levels can end up with multiple Ground Objects for scenery, etc.
+        //This is unintentional and could only be fixed by de-parenting blocks from the blocks we're placing them on OnDisable of the Level
+
         /*
-         * Will place's special blocks in a level
+         * Places special blocks in a level & called by levels themselves
          * @param List<Block> BlocksWithinBounds : a level's Blocks that are within the screens viewport
          */
-        public void DetermineGroundObjects(List<Block> BlocksWithinBounds)
+        public IEnumerator DetermineGroundObjects(List<Block> BlocksWithinBounds)
         {
-            //Get a random Block from the list
-            int index = rando.Next(BlocksWithinBounds.Count);
+            yield return new WaitForSeconds(0.1f);
 
-            //Set's the block's top's
+            //Get a random Block from the list for tops
+            int blockIndex = rando.Next(BlocksWithinBounds.Count);
+
+            //Get another random Block from list for scenery
+            int sceneryIndex = rando.Next(BlocksWithinBounds.Count);
+            
+            //safety check so we aren't accessing non existent indexs
             if (BlocksWithinBounds.Count > 0) {
-                Block b = BlocksWithinBounds[index];
+                //Set's the block's top's
+                Block b = BlocksWithinBounds[blockIndex];
                 SetBlockTop(b);
+
+                //Set the scenery
+                Block s = BlocksWithinBounds[sceneryIndex];
+                SetScenery(s);
             }
             
-            //Get another random Block from list
-            int index2 = rando.Next(BlocksWithinBounds.Count);
-            //check it's BlockType and set an offset block of the same BlockType
-            //get a random scenery block and place it at that block?
         }
 
         /*
@@ -156,10 +169,35 @@ namespace StudioByStorm.Scripts
                     BlockTop.gameObject.transform.position = targetTopPosition;
                     BlockTop.gameObject.SetActive(true);
                     b.SetCurrentBlockType(newBlockType);
-                    Debug.LogError("Placing: " + newBlockType);
+                    //Debug.LogError("Placing: " + newBlockType);
                 } else {
                     //Debug.Log("couldn't set the new top. This means they're either all in use, or the blocktype of the request block hasn't been added to the registry yet");
                 }
+            }
+        }
+
+        public void SetScenery(Block s)
+        {
+            //get the new SceneryBlock to use
+            Block SceneryBlock = GetBlockByType(s.InitialBlockType);
+
+            //if a corresponding blocktype was found
+            if (SceneryBlock != null) {
+
+                //put the block in the scene
+                Vector3 targetPos = s.gameObject.transform.position;
+                if (bLastScenerySpawnedInFront) {
+                    bLastScenerySpawnedInFront = false;
+                    targetPos.z += sceneryOffset;
+                } else {
+                    bLastScenerySpawnedInFront = true;
+                    targetPos.z -= sceneryOffset;
+                }
+                
+                SceneryBlock.gameObject.transform.SetParent(s.gameObject.transform);
+                SceneryBlock.gameObject.transform.position = targetPos;
+                SceneryBlock.gameObject.SetActive(true);
+                //Debug.LogError("Placing scenery");
             }
         }
     }
