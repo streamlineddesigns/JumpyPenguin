@@ -17,6 +17,7 @@ namespace StudioByStorm.Scripts
         protected Vector3 targetLeftPos;
         public GameObject SplashView;
         public GameObject FTUE;
+        public Tutorials Tutorials;
         public GameObject StartView;
         public GameObject GameView;
         public Animator PlatformRiseAnimator;
@@ -99,6 +100,8 @@ namespace StudioByStorm.Scripts
         }
 
         protected IEnumerator PlayGame() {
+            TutorialCheck();
+
             yield return new WaitForSeconds(0.5f);
             StartView.SetActive(false);
             PlatformRiseAnimator.SetTrigger("PopUp");
@@ -111,7 +114,25 @@ namespace StudioByStorm.Scripts
             LevelController.spawnNewLevel();
         }
 
+        protected void TutorialCheck()
+        {
+            //if the InGameTutorial hasn't been completed yet
+            if (ZPlayerPrefs.GetInt("InGameTutorial") != 1) {
+                Tutorials.letTheLessonsBegin();
+            }
+        }
+
         public void FTUEStart()
+        {
+            _isGameActive = true;
+        }
+
+        public void TutorialsPlaying()
+        {
+            _isGameActive = false;
+        }
+
+        public void TutorialsDone()
         {
             _isGameActive = true;
         }

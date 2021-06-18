@@ -6,6 +6,7 @@ namespace StudioByStorm.Scripts
 {
     public class LevelController : MonoBehaviour
     {
+        public GroundObjectsController GroundObjectsController;
         protected int currentHighestLevel = 3;
         protected int currentLevel = 0;
         protected int score = 0;

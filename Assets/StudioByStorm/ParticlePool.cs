@@ -14,6 +14,8 @@ namespace StudioByStorm.Scripts
             WaterSplash,
             IcicleWall,
             IceTrack,
+            FallingIce,
+            FlashingTarget,
 
         };
         //particles
@@ -22,6 +24,8 @@ namespace StudioByStorm.Scripts
         public GameObject WaterSplashParticle;
         public GameObject IcicleWallParticle;
         public GameObject IceTrackParticle;
+        public GameObject FallingIceParticle;
+        public GameObject FlashingTargetParticle;
 
         //pool
         protected List<GameObject> EnemyDeathParticlePool = new List<GameObject>();
@@ -29,6 +33,8 @@ namespace StudioByStorm.Scripts
         protected List<GameObject> WaterSplashParticlePool = new List<GameObject>();
         protected List<GameObject> IcicleWallParticlePool = new List<GameObject>();
         protected List<GameObject> IceTrackParticlePool = new List<GameObject>();
+        protected List<GameObject> FallingIceParticlePool = new List<GameObject>();
+        protected List<GameObject> FlashingTargetParticlePool = new List<GameObject>();
 
         void Awake()
         {
@@ -50,6 +56,8 @@ namespace StudioByStorm.Scripts
             instantiateParticle(WaterSplashParticle, WaterSplashParticlePool);
             instantiateParticle(IcicleWallParticle, IcicleWallParticlePool);
             instantiateParticle(IceTrackParticle, IceTrackParticlePool);
+            instantiateParticle(FallingIceParticle, FallingIceParticlePool);
+            instantiateParticle(FlashingTargetParticle, FlashingTargetParticlePool);
         }
 
         protected void instantiateParticle(GameObject particleToAdd, List<GameObject> poolToAddTo)
@@ -89,6 +97,16 @@ namespace StudioByStorm.Scripts
                 //Ice Track
                 case ParticleType.IceTrack :
                     particle = _getAvailableParticle(IceTrackParticlePool, ParticleType.IceTrack);
+                    break;
+
+                //Falling Ice
+                case ParticleType.FallingIce :
+                    particle = _getAvailableParticle(FallingIceParticlePool, ParticleType.FallingIce);
+                    break;
+
+                //Flashing Target
+                case ParticleType.FlashingTarget :
+                    particle = _getAvailableParticle(FlashingTargetParticlePool, ParticleType.FlashingTarget);
                     break;
             }
 
@@ -131,6 +149,14 @@ namespace StudioByStorm.Scripts
                     //Ice Track
                     case ParticleType.IceTrack :
                         instantiateParticle(IceTrackParticle, IceTrackParticlePool);
+                        break;
+                    //Falling Ice
+                    case ParticleType.FallingIce :
+                        instantiateParticle(FallingIceParticle, FallingIceParticlePool);
+                        break;
+                    //Flashing Target
+                    case ParticleType.FlashingTarget :
+                        instantiateParticle(FlashingTargetParticle, FlashingTargetParticlePool);
                         break;
                 }
                 particle = pool[pool.Count - 1];

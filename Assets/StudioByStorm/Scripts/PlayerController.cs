@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.NiceVibrations;
 
 namespace StudioByStorm.Scripts
 {
@@ -20,6 +21,11 @@ namespace StudioByStorm.Scripts
 
         void OnTriggerEnter(Collider other)
         {
+
+            if (other.gameObject.GetComponent<Block>() != null) {
+                //Debug.Log("Walking On : " + other.gameObject.GetComponent<Block>().GetCurrentBlockType());
+            }
+
             if (other.tag == "H2O" && !bEnteredWater) {
                 
                 bEnteredWater = true;
@@ -93,6 +99,7 @@ namespace StudioByStorm.Scripts
             isDead = true;
             playerAnim.SetBool("Die", true);
             ShowDizzyEffect();
+            MMVibrationManager.Haptic(HapticTypes.Failure, false, true, this);
         }
 
         public void KnockOut()

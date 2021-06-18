@@ -26,6 +26,15 @@ namespace StudioByStorm.Scripts
         public bool bCanHaveIce;
         protected float lastEnemySpawned;
 
+
+        //used to determine if parts of the level are fully on screen or not
+        public List<Block> BlocksWithinBounds = new List<Block>();
+        protected float partWidth = 2.0f;
+        protected float RightBounds;
+        protected float LeftBounds;
+        protected Vector3 targetRightPos;
+        protected Vector3 targetLeftPos;
+
         void Awake()
         {
 
@@ -34,11 +43,18 @@ namespace StudioByStorm.Scripts
         // Start is called before the first frame update
         void Start()
         {
+            RightBounds = Screen.width;
+            LeftBounds = 0;
+
             //level pieces
             parts = new GameObject[gameObject.transform.childCount];
             
             for (int i = 0; i < gameObject.transform.childCount; i++) {
                 parts[i] = gameObject.transform.GetChild(i).gameObject;
+
+                if(isPartInLeftBounds(parts[i]) && isPartInRightBounds(parts[i])) {
+                    BlocksWithinBounds.Add(parts[i].GetComponent<Block>());
+                }
             }
         }
 
@@ -76,6 +92,8 @@ namespace StudioByStorm.Scripts
             if (isInitialized && GameController.Instance != null && GameController.Instance.isGameActive && ! (objEnemySpawnPoints == null || objEnemySpawnPoints.Length == 0)) {
                 SpawnEnemy();
             }
+
+            if (isInitialized && GameController.Instance != null && GameController.Instance.isGameActive) GameController.Instance.LevelController.GroundObjectsController.DetermineGroundObjects(BlocksWithinBounds);
         }
 
         // Update is called once per frame
@@ -187,6 +205,18 @@ namespace StudioByStorm.Scripts
                     vecEnemySpawnPoints[j] = objEnemySpawnPoints[j].transform.TransformPoint(Vector3.zero);
                 }   
             }
+        }
+
+        protected bool isPartInRightBounds(GameObject part)
+        {
+            targetRightPos = new Vector3(part.transform.position.x - partWidth + 0.4f, part.transform.position.y, part.transform.position.z);
+            return (GameController.Instance.Camera.WorldToScreenPoint(targetRightPos).x < RightBounds);
+        }
+
+        protected bool isPartInLeftBounds(GameObject part)
+        {
+            targetLeftPos = new Vector3(part.transform.position.x + partWidth - 0.4f, part.transform.position.y, part.transform.position.z);
+            return (GameController.Instance.Camera.WorldToScreenPoint(targetLeftPos).x > LeftBounds);
         }
     }
 }
