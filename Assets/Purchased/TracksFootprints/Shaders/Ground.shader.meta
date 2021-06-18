@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 49a56493909a3804b9e4155790b894c9
+timeCreated: 1595874867
+licenseType: Store
+ShaderImporter:
+  defaultTextures:
+  - _UpGroundTex: {instanceID: 0}
+  - _DownGroundTex: {instanceID: 0}
+  - _Splat: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

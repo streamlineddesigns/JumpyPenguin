@@ -44,7 +44,7 @@ namespace MoreMountains.NiceVibrations
                                                      DemoItems[index].RumbleWaveFormAsset.WaveForm.Pattern, DemoItems[index].RumbleWaveFormAsset.WaveForm.LowFrequencyAmplitudes,
                                                      DemoItems[index].RumbleWaveFormAsset.WaveForm.HighFrequencyAmplitudes, -1,
                                                      HapticTypes.LightImpact, this);
-            DemoItems[index].AssociatedSound.Play();
+            //DemoItems[index].AssociatedSound.Play();
             StartCoroutine(ChangeIcon(DemoItems[index].AssociatedSprite));
         }
         

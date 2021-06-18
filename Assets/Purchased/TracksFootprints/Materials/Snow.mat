@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Snow
+  m_Shader: {fileID: 4800000, guid: 49a56493909a3804b9e4155790b894c9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DownGroundTex:
+        m_Texture: {fileID: 2800000, guid: cc2ea2ffad621b54f9d5c6f6dbfc7e93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DownSplat:
+        m_Texture: {fileID: 8400000, guid: 49b16061a5be5c94e87125e752df1c2a, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GroundTex:
+        m_Texture: {fileID: 2800000, guid: 585810862bf182a48b9a5286422c2d0b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: b94cd231dd9e15649b774d02be9ea08f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UpGroundTex:
+        m_Texture: {fileID: 2800000, guid: cc2ea2ffad621b54f9d5c6f6dbfc7e93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UpSplat:
+        m_Texture: {fileID: 8400000, guid: 35bed8dbbc190e042a227c655286fb15, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DownDisplacement: 0.48
+    - _Glossiness: 0
+    - _Metallic: 0
+    - _Tess: 32
+    - _UpDisplacement: 0.03
+    m_Colors:
+    - _DownGroundColor: {r: 0.27200475, g: 0.30613744, b: 0.31617647, a: 1}
+    - _GroundColor: {r: 0.9705882, g: 0.9705882, b: 0.9705882, a: 1}
+    - _UpGroundColor: {r: 0, g: 0, b: 0, a: 1}
