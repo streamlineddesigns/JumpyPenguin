@@ -15,7 +15,7 @@ public class MobileInput : MonoBehaviour
     public float previousSwipeType;//-1 for left : 1 for right
 
     //initial timer used for initialization and resets
-    protected float initialSwipeTimer = 0.1f;
+    protected float initialSwipeTimer = 0.0f;
     //right swipe
     protected float swipeRightTimer;
     public bool SwipeRight = false;
@@ -77,13 +77,16 @@ public class MobileInput : MonoBehaviour
 
 
     protected void swipeRightInputListener() {
+        
 
-        if (MobileInput.Singleton.LeanJoyStick.ScaledValue.x > 0.0f) {
+        if (LeanJoyStick.ScaledValue.x > 0.0f) {
 
             swipeRightTimer -= Time.deltaTime;
             if (swipeRightTimer <= 0.0f) {
-                SwipeRight = true;
-                previousSwipeType = 1;
+                if (JoyStickHandle.HorizontalState == JoyStickHandle.HorizontalStateEnum.RA) {
+                    SwipeRight = true;
+                    previousSwipeType = 1;
+                }
             }
 
         } else {
@@ -94,13 +97,16 @@ public class MobileInput : MonoBehaviour
     }
 
     protected void swipeLeftInputListener() {
+        
 
-        if (MobileInput.Singleton.LeanJoyStick.ScaledValue.x < 0.0f) {
+        if (LeanJoyStick.ScaledValue.x < 0.0f) {
 
             swipeLeftTimer -= Time.deltaTime;
             if (swipeLeftTimer <= 0.0f) {
-                SwipeLeft = true;
-                previousSwipeType = -1;
+                if (JoyStickHandle.HorizontalState == JoyStickHandle.HorizontalStateEnum.LA) {
+                    SwipeLeft = true;
+                    previousSwipeType = -1;
+                }
             }
 
         } else {
@@ -111,8 +117,9 @@ public class MobileInput : MonoBehaviour
     }
 
     protected void swipeUpInputListener() {
+        
 
-        if (MobileInput.Singleton.LeanJoyStick.ScaledValue.y > 0.75f) {
+        if (JoyStickHandle.VerticalState == JoyStickHandle.VerticalStateEnum.ON) {
 
             swipeUpTimer -= Time.deltaTime;
             if (swipeUpTimer <= 0.0f) {
@@ -124,7 +131,7 @@ public class MobileInput : MonoBehaviour
                 previousJumpPosition = 1;
             }
 
-        } else if (MobileInput.Singleton.LeanJoyStick.ScaledValue.y < 0.75f) {
+        } else if (JoyStickHandle.VerticalState == JoyStickHandle.VerticalStateEnum.OFF) {
             previousJumpPosition = -1;
             swipeUpTimer = initialSwipeTimer;
             SwipeUp = false;

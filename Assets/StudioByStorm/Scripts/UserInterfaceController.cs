@@ -14,6 +14,7 @@ namespace StudioByStorm.Scripts
         public GameObject GameView;
         public GameObject GameOverView;
         public GameObject FrostView;
+        public bool isDialogBeingClicked;
 
         public void updateScore(int score)
         {
@@ -59,6 +60,16 @@ namespace StudioByStorm.Scripts
         public void FrostCamera()
         {
             FrostView.SetActive(true);
+        }
+
+        public void OnDialogPointerDown()
+        {
+            isDialogBeingClicked = true;
+        }
+
+        public void OnDialogPointerUp()
+        {
+            isDialogBeingClicked = false;
         }
     }
 }

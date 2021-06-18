@@ -75,11 +75,15 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
         public float getHorizontalInput() 
         {
+            //if the game isn't active, return 0
             if (! GameController.Instance.isGameActive) {
                 return 0.0f;
             }
 
-            if (MobileInput.Singleton.LeanJoyStick.ScaledValue.x != 0.0f) {
+            //if the joystick is being moved left or right passed a certain value
+            if (JoyStickHandle.HorizontalState != JoyStickHandle.HorizontalStateEnum.NA) {//MobileInput.Singleton.LeanJoyStick.ScaledValue.x != 0.0f) {
+
+                //Debug.Log(MobileInput.Singleton.LeanJoyStick.ScaledValue.x);
 
                 if (MobileInput.Singleton.SwipeLeft) {
                     horizontalInput = -1.0f;
@@ -115,10 +119,12 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 }
             }
 
+            //stop ground sounds if the player isn't grounded anymore. ie jumping
             if (! m_Character.IsGrounded) {
                 stopGroundSounds();
             }
 
+            //set horizontal input to 0 if its close to 0
             if ((horizontalInput > 0.0f && horizontalInput < 0.1f) || (horizontalInput < 0.0f && horizontalInput > -0.1f)) {
                 horizontalInput = 0.0f;
             }
