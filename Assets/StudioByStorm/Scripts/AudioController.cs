@@ -14,6 +14,7 @@ public class AudioController : MonoBehaviour
     public AudioSource KnockOutSound;
     public List<AudioSource> SnowWalkingSounds = new List<AudioSource>();
     protected bool isWalkingSoundPlaying;
+    public AudioSource typeWriterSound;
 
     void Awake()
     {
@@ -95,5 +96,10 @@ public class AudioController : MonoBehaviour
     public void PlayKnockOutSound()
     {
         if (! KnockOutSound.isPlaying) KnockOutSound.Play();
+    }
+
+    public void PlayTypeWriterSound()
+    {
+        typeWriterSound.Play();
     }
 }
