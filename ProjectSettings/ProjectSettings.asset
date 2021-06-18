@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: StreamlinedDesigns
-  productName: Jumpy Penguin
+  companyName: StudioByStorm
+  productName: Jumpy Pengooey
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -267,7 +267,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 92a62e420e84b5a498aff504f1781332, type: 3}
+      m_Icon: {fileID: 2800000, guid: 4f4d0d2ba77882c4fada47ee9cc6b4b7, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

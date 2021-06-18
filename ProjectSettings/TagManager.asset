@@ -10,6 +10,9 @@ TagManager:
   - FxTemporaire
   - SpellFX
   - Ice
+  - LA1
+  - RA1
+  - UA1
   layers:
   - Default
   - TransparentFX
