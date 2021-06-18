@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 411825406208218036}
   - component: {fileID: 405015350944956000}
   - component: {fileID: 370829847974562978}
+  - component: {fileID: 6615614651866684569}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -93,6 +94,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &6615614651866684569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417444905339781216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 4
+  bCurrentOverridden: 0
 --- !u!1 &417444905925287040
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +120,7 @@ GameObject:
   - component: {fileID: 411825405636349780}
   - component: {fileID: 405015351509475968}
   - component: {fileID: 370829847465349186}
+  - component: {fileID: 482925778117336854}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -186,6 +202,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &482925778117336854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417444905925287040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 4
+  bCurrentOverridden: 0
 --- !u!1 &417444906420063598
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +228,7 @@ GameObject:
   - component: {fileID: 411825405140426426}
   - component: {fileID: 405015349872997230}
   - component: {fileID: 370829849050677676}
+  - component: {fileID: 9222505701574292485}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -279,6 +310,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &9222505701574292485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417444906420063598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 4
+  bCurrentOverridden: 0
 --- !u!1 &417444906909636719
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +336,7 @@ GameObject:
   - component: {fileID: 411825405481421755}
   - component: {fileID: 405015349509056111}
   - component: {fileID: 370829848988669101}
+  - component: {fileID: 2304742310043969280}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -372,6 +418,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &2304742310043969280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417444906909636719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 4
+  bCurrentOverridden: 0
 --- !u!1 &417444907003513409
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +444,7 @@ GameObject:
   - component: {fileID: 411825404583287189}
   - component: {fileID: 405015350422926401}
   - component: {fileID: 370829848560289411}
+  - component: {fileID: 171784998465804926}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -465,6 +526,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &171784998465804926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417444907003513409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 4
+  bCurrentOverridden: 0
 --- !u!1 &418653295795450758
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,3 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parts: []
+  BlocksWithinBounds: []
+  objEnemySpawnPoints: []
+  bDespawning: 0
+  bWhatLevlAmI: 0
+  bCanHaveIce: 0

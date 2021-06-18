@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3105135161410835747}
   - component: {fileID: 2526105901685602487}
   - component: {fileID: 1171683456894215683}
+  - component: {fileID: 6208898498006435777}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -93,6 +94,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &6208898498006435777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875772177817165764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 1
+  bCurrentOverridden: 0
 --- !u!1 &4217451448601873176
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +120,7 @@ GameObject:
   - component: {fileID: 4592869528804388260}
   - component: {fileID: 9065731775361507147}
   - component: {fileID: 2682877099674227535}
+  - component: {fileID: 3658774598123622104}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -186,6 +202,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &3658774598123622104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217451448601873176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 1
+  bCurrentOverridden: 0
 --- !u!1 &7015306155063069206
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +228,7 @@ GameObject:
   - component: {fileID: 572286712733869225}
   - component: {fileID: 5331027845229822307}
   - component: {fileID: 324698427114548138}
+  - component: {fileID: 7419856663451694017}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -279,6 +310,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &7419856663451694017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7015306155063069206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 1
+  bCurrentOverridden: 0
 --- !u!1 &8379309239600041502
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +336,7 @@ GameObject:
   - component: {fileID: 8149367866628054118}
   - component: {fileID: 158755045341271119}
   - component: {fileID: 5801341827926855165}
+  - component: {fileID: 3444140893365685906}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -372,6 +418,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &3444140893365685906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379309239600041502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 1
+  bCurrentOverridden: 0
 --- !u!1 &8661212213196734907
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +444,7 @@ GameObject:
   - component: {fileID: 840259035444603891}
   - component: {fileID: 1631605956212387311}
   - component: {fileID: 4287798440773780998}
+  - component: {fileID: 1086878053040391584}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -465,6 +526,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2, z: 1.0000001}
   m_Center: {x: 0, y: -0.7, z: -0.000000059604645}
+--- !u!114 &1086878053040391584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8661212213196734907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 1
+  bCurrentOverridden: 0
 --- !u!1 &9169140444472680141
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,3 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parts: []
+  BlocksWithinBounds: []
+  objEnemySpawnPoints: []
+  bDespawning: 0
+  bWhatLevlAmI: 0
+  bCanHaveIce: 0

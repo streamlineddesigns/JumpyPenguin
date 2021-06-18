@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1616875973966814914}
   - component: {fileID: 3748241600157055723}
   - component: {fileID: 4735153721483440642}
+  - component: {fileID: 7775116775189613957}
   m_Layer: 0
   m_Name: SnowBreak
   m_TagString: Untagged
@@ -137,6 +138,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!114 &7775116775189613957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894583862951199774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 3
+  bCurrentOverridden: 0
 --- !u!1 &4032614427215670474
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +167,7 @@ GameObject:
   - component: {fileID: 8176743962105454956}
   - component: {fileID: 3554987650514940476}
   - component: {fileID: 7320675483137542286}
+  - component: {fileID: 4398941197610480111}
   m_Layer: 0
   m_Name: SnowBreak
   m_TagString: Untagged
@@ -274,6 +290,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!114 &4398941197610480111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032614427215670474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 3
+  bCurrentOverridden: 0
 --- !u!1 &5579135976976542144
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +319,7 @@ GameObject:
   - component: {fileID: 5953666567856287785}
   - component: {fileID: 7807704027607680345}
   - component: {fileID: 1954713698287420085}
+  - component: {fileID: 323387065560048138}
   m_Layer: 0
   m_Name: SnowBreak
   m_TagString: Untagged
@@ -411,6 +442,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!114 &323387065560048138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579135976976542144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 3
+  bCurrentOverridden: 0
 --- !u!1 &6398945158076546161
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +471,7 @@ GameObject:
   - component: {fileID: 990019404685750137}
   - component: {fileID: 5189175735616539804}
   - component: {fileID: 7625106894244792950}
+  - component: {fileID: 8314476809305332497}
   m_Layer: 0
   m_Name: SnowBreak
   m_TagString: Untagged
@@ -548,6 +594,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!114 &8314476809305332497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398945158076546161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 3
+  bCurrentOverridden: 0
 --- !u!1 &6645037192832827611
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +623,7 @@ GameObject:
   - component: {fileID: 3470617103379159823}
   - component: {fileID: 1242638971255129015}
   - component: {fileID: 7038014289559401644}
+  - component: {fileID: 4795929703857064662}
   m_Layer: 0
   m_Name: SnowBreak
   m_TagString: Untagged
@@ -685,6 +746,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!114 &4795929703857064662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645037192832827611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 3
+  bCurrentOverridden: 0
 --- !u!1 &8070871628745093108
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +810,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parts: []
+  BlocksWithinBounds: []
+  objEnemySpawnPoints: []
+  bDespawning: 0
+  bWhatLevlAmI: 0
+  bCanHaveIce: 0
 --- !u!1 &8498190824206979344
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +830,7 @@ GameObject:
   - component: {fileID: 2867160465999033239}
   - component: {fileID: 7370471716457177030}
   - component: {fileID: 3519603217916534589}
+  - component: {fileID: 6438703862862781771}
   m_Layer: 0
   m_Name: SnowBreak
   m_TagString: Untagged
@@ -872,3 +953,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
+--- !u!114 &6438703862862781771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498190824206979344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554889455073b14ba8d6127c5611608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialBlockType: 3
+  bCurrentOverridden: 0
