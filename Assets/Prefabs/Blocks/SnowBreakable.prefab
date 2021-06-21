@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1042591438566793161}
   - component: {fileID: 2430473961292572671}
   - component: {fileID: 912652123637810811}
+  - component: {fileID: 1018203977011557291}
   m_Layer: 0
   m_Name: SnowBreakable
   m_TagString: Untagged
@@ -108,3 +109,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialBlockType: 3
   bCurrentOverridden: 0
+--- !u!114 &1018203977011557291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994308237309627483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d8fa2605eacb6148b548ebd7c01f732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bBreakOverride: 1

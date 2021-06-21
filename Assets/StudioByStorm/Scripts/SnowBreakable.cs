@@ -29,6 +29,7 @@ namespace StudioByStorm.Scripts
         protected float shrinkZStep;
 
         protected bool bBreak;
+        public bool bBreakOverride = false;
         protected bool bPlayerBrokeThreshold;
 
         void Start()
@@ -52,6 +53,10 @@ namespace StudioByStorm.Scripts
             if (bBreak) {
                 transform.localScale = originalScale;
                 targetScale = originalScale;
+
+            //used by snowBreakable Block
+            } else if (bBreakOverride) {
+                transform.localScale = new Vector3(1, 1, 1);
             }
             bBreak = false;
             bPlayerBrokeThreshold = false;

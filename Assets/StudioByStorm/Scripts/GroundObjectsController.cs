@@ -109,7 +109,7 @@ namespace StudioByStorm.Scripts
                 
                 //check to see if there's an available Block of type BlockType
                 while(index < blocksRegistry[bt].Count) {
-                    if (blocksRegistry[bt][index].gameObject.activeInHierarchy == false) {
+                    if (! blocksRegistry[bt][index].gameObject.activeSelf) {
                         block = blocksRegistry[bt][index];
                         break; 
                     }
@@ -170,24 +170,40 @@ namespace StudioByStorm.Scripts
             //Get a random Block from the list for tops
             int blockIndex = rando.Next(level.BlocksWithinBounds.Count);
 
-            //Get another random Block from list for scenery
+            //Get another random Block from list for ground block
             int sceneryIndex = rando.Next(level.BlocksWithinBounds.Count);
             
             //safety check so we aren't accessing non existent indexs
             if (level.BlocksWithinBounds.Count > 0) {
+                //blocks to Queue up. Need these so they can be deactivated properly
+                List<Block> blocksToQueue = new List<Block>();
+
                 //Set's the block's top's
                 Block b = level.BlocksWithinBounds[blockIndex];
                 Block blockTop = SetBlockTop(b);
+                //Enqueue blockTop
+                if (blockTop != null) {
+                    blocksToQueue.Add(blockTop);
+                }
 
                 //Set the scenery ground block
                 Block s = level.BlocksWithinBounds[sceneryIndex];
                 Block sceneryGroundBlock = SetSceneryGroundBlock(s);
+                if (sceneryGroundBlock != null) {
+                    //Enqueue sceneryGroundBlock
+                    blocksToQueue.Add(sceneryGroundBlock);
 
-                //Set the scenery on the ground block
-                Block sceneryBlock = SetSceneryOnGround(sceneryGroundBlock);
+                    //Set the scenery on the ground block
+                    Block sceneryBlock = SetSceneryOnGround(sceneryGroundBlock);
+                    //Enqueue sceneryBlock
+                    if (sceneryBlock != null) {
+                        blocksToQueue.Add(sceneryBlock);
+                    }
+
+                }
 
                 //add blocks to the levels block queue
-                level.EnqueueBlocks(new List<Block>{blockTop, sceneryGroundBlock, sceneryBlock});
+                level.EnqueueBlocks(blocksToQueue);
             }
             
         }
@@ -299,7 +315,7 @@ namespace StudioByStorm.Scripts
                 SceneryBlock.gameObject.transform.SetParent(SceneryGroundBlock.gameObject.transform);
                 SceneryBlock.gameObject.transform.position = targetPos;
                 SceneryBlock.gameObject.SetActive(true);
-                Debug.LogError("We found a match for on top of the ground: " + bt);
+                //Debug.LogError("We found a match for on top of the ground: " + bt);
             }
             return SceneryBlock;
         }

@@ -6,7 +6,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterScene_Tree 4 (UnityEngine.Material)
+  m_Name: TreeMatBlue (UnityEngine.Material)
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
