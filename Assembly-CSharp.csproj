@@ -239,6 +239,8 @@
      <Compile Include="Assets\StudioByStorm\Scripts\MobileInput.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\PlayerController.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\SceneController.cs" />
+     <Compile Include="Assets\StudioByStorm\Scripts\Scenery\Tree.cs" />
+     <Compile Include="Assets\StudioByStorm\Scripts\Scenery\TreesController.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\SnowBreakable.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\SplashView.cs" />
      <Compile Include="Assets\StudioByStorm\Scripts\Tutorials.cs" />

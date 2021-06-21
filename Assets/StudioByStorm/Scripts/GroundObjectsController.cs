@@ -25,11 +25,27 @@ namespace StudioByStorm.Scripts
             Oil,//Top
             Tree,
             TreeStump,
+            Logs,
+            Water,
+            WaterFall,
+            Snowman,
         };
+
+        [Tooltip("Add any newly created scenery BlockType's please. These get placed ontop of the ground itself. ie tree, flower, etc")]
+        public List<BlockType> SceneryBlockTypes = new List<BlockType>();
+
+        [Tooltip("Add BlockType's who's pool size should be dynamic & able to grow on the fly instead of being fixed")]
+        public List<BlockType> DynamicallyPooledBlockTypes = new List<BlockType>();
+
+        //Keeps associations between BlockTypes and their prefabs
+        protected Dictionary<BlockType, GameObject> BlockTypePrefabs = new Dictionary<BlockType, GameObject>();
 
         public GameObject blocksContainer;
         protected int blocksToPoolCount = 5;
+
+        [Tooltip("Add Block prefabs to this list to have pools created for it's BlockType")]
         public List<GameObject> blocksToPool = new List<GameObject>();
+
         protected Dictionary<BlockType, List<Block>> blocksRegistry = new Dictionary<BlockType, List<Block>>();
 
         protected System.Random rando = new System.Random();
@@ -37,6 +53,7 @@ namespace StudioByStorm.Scripts
         //For scenery
         protected bool bLastScenerySpawnedInFront = false;
         protected float sceneryOffset = 3.0f;
+        public TreesController TreesController; 
 
         public void Awake()
         {
@@ -58,10 +75,13 @@ namespace StudioByStorm.Scripts
 
                     //instantiate & add blocks to that list
                     for (int j = 0; j < blocksToPoolCount; j++) {
+
                         Block block = Instantiate(blocksToPool[i], blocksContainer.transform).GetComponent<Block>();
                         blockType = block.InitialBlockType;
                         block.gameObject.SetActive(false);
                         blockList.Add(block);
+
+                        AddToBlockTypePrefabs(blockType, blocksToPool[i]);
                     }
 
                     //Add that list to the block registry by it's blocktype
@@ -84,14 +104,27 @@ namespace StudioByStorm.Scripts
             int index = 0;
             Block block = null;
 
+            //if the block registry has a key/value pair for the supplied BlockType
             if (blocksRegistry.ContainsKey(bt)) {
                 
+                //check to see if there's an available Block of type BlockType
                 while(index < blocksRegistry[bt].Count) {
-                    if (blocksRegistry[bt][index].gameObject.active == false) {
+                    if (blocksRegistry[bt][index].gameObject.activeInHierarchy == false) {
                         block = blocksRegistry[bt][index];
                         break; 
                     }
                     index++;
+                }
+
+                //if there wasn't an available Block of type BlockType, && it's a dynamically pooled block type
+                if (block == null && DynamicallyPooledBlockTypes.Contains(bt)) {
+
+                    //create a new block and add it to its corresponding pool so we have an available block
+                    block = Instantiate(GetPrefabByBlockType(bt), blocksContainer.transform).GetComponent<Block>();
+                    block.gameObject.SetActive(false);
+                    blocksRegistry[bt].Add(block);
+
+                    Debug.LogError("Instantiating DynamicallyPooledBlockType: " + bt);
                 }
 
             }
@@ -99,32 +132,62 @@ namespace StudioByStorm.Scripts
             return block;
         }
 
-        //NOTE: Levels can end up with multiple Ground Objects for scenery, etc.
-        //This is unintentional and could only be fixed by de-parenting blocks from the blocks we're placing them on OnDisable of the Level
+        /*
+         * Adds blocktype/prefab associations to BlockTypePrefabs
+         * @param BlockType bt : the key used in BlockTypePrefabs
+         * @param GameObject prefab : the value to bt
+         */
+        protected void AddToBlockTypePrefabs(BlockType bt, GameObject prefab)
+        {
+            //makes sure to only add association one time
+            if (! BlockTypePrefabs.ContainsKey(bt)) {
+                BlockTypePrefabs.Add(bt, prefab);
+            }
+        }
+
+        /*
+         * Used to retrieve prefabs by BlockType from BlockTypePrefabs dictionary
+         * @param BlockType bt : the key used in BlockTypePrefabs
+         * @return GameObject : the value to the key supplied
+         */
+        protected GameObject GetPrefabByBlockType(BlockType bt)
+        {
+            GameObject prefab = null;
+            if (BlockTypePrefabs.ContainsKey(bt)) {
+                prefab = BlockTypePrefabs[bt];
+            }
+            return prefab;
+        }
 
         /*
          * Places special blocks in a level & called by levels themselves
          * @param List<Block> BlocksWithinBounds : a level's Blocks that are within the screens viewport
          */
-        public IEnumerator DetermineGroundObjects(List<Block> BlocksWithinBounds)
+        public IEnumerator DetermineGroundObjects(Level level)
         {
             yield return new WaitForSeconds(0.1f);
 
             //Get a random Block from the list for tops
-            int blockIndex = rando.Next(BlocksWithinBounds.Count);
+            int blockIndex = rando.Next(level.BlocksWithinBounds.Count);
 
             //Get another random Block from list for scenery
-            int sceneryIndex = rando.Next(BlocksWithinBounds.Count);
+            int sceneryIndex = rando.Next(level.BlocksWithinBounds.Count);
             
             //safety check so we aren't accessing non existent indexs
-            if (BlocksWithinBounds.Count > 0) {
+            if (level.BlocksWithinBounds.Count > 0) {
                 //Set's the block's top's
-                Block b = BlocksWithinBounds[blockIndex];
-                SetBlockTop(b);
+                Block b = level.BlocksWithinBounds[blockIndex];
+                Block blockTop = SetBlockTop(b);
 
-                //Set the scenery
-                Block s = BlocksWithinBounds[sceneryIndex];
-                SetScenery(s);
+                //Set the scenery ground block
+                Block s = level.BlocksWithinBounds[sceneryIndex];
+                Block sceneryGroundBlock = SetSceneryGroundBlock(s);
+
+                //Set the scenery on the ground block
+                Block sceneryBlock = SetSceneryOnGround(sceneryGroundBlock);
+
+                //add blocks to the levels block queue
+                level.EnqueueBlocks(new List<Block>{blockTop, sceneryGroundBlock, sceneryBlock});
             }
             
         }
@@ -132,9 +195,12 @@ namespace StudioByStorm.Scripts
         /*
          * add the proper Top to the supplied block
          * @param Block b : the block that we're adding a top to
+         * @return Block : the block top, if any
          */
-        public void SetBlockTop(Block b)
+        public Block SetBlockTop(Block b)
         {
+            Block BlockTop = null;
+
             //The new blocktype that will override b's blocktype
             BlockType newBlockType = BlockType.Default;
 
@@ -160,7 +226,7 @@ namespace StudioByStorm.Scripts
             if (newBlockType != BlockType.Default) {
 
                 //get the new BlockTop to use
-                Block BlockTop = GetBlockByType(newBlockType);
+                BlockTop = GetBlockByType(newBlockType);
 
                 if (BlockTop != null) {
                     //put the BlockTop in scene
@@ -168,21 +234,32 @@ namespace StudioByStorm.Scripts
                     BlockTop.gameObject.transform.SetParent(b.gameObject.transform);
                     BlockTop.gameObject.transform.position = targetTopPosition;
                     BlockTop.gameObject.SetActive(true);
-                    b.SetCurrentBlockType(newBlockType);
+                    //##$$!!FIX
+                    //only override blocktype if the new blocktype meets certain criteria 
+                    if (newBlockType != BlockType.UndersideIcicle && newBlockType != BlockType.MovingGrass) {
+                        b.SetCurrentBlockType(newBlockType);
+                    }
                     //Debug.LogError("Placing: " + newBlockType);
                 } else {
                     //Debug.Log("couldn't set the new top. This means they're either all in use, or the blocktype of the request block hasn't been added to the registry yet");
                 }
             }
+
+            return BlockTop;
         }
 
-        public void SetScenery(Block s)
+        /*
+         * add a ground scenery block to the supplied block
+         * @param Block s : the block that we're adding another ground scenery block to
+         * @return Block : the scenery block, if any
+         */
+        public Block SetSceneryGroundBlock(Block s)
         {
             //get the new SceneryBlock to use
-            Block SceneryBlock = GetBlockByType(s.InitialBlockType);
+            Block SceneryGroundBlock = GetBlockByType(s.InitialBlockType);
 
             //if a corresponding blocktype was found
-            if (SceneryBlock != null) {
+            if (SceneryGroundBlock != null) {
 
                 //put the block in the scene
                 Vector3 targetPos = s.gameObject.transform.position;
@@ -194,11 +271,37 @@ namespace StudioByStorm.Scripts
                     targetPos.z -= sceneryOffset;
                 }
                 
-                SceneryBlock.gameObject.transform.SetParent(s.gameObject.transform);
-                SceneryBlock.gameObject.transform.position = targetPos;
-                SceneryBlock.gameObject.SetActive(true);
+                SceneryGroundBlock.gameObject.transform.SetParent(s.gameObject.transform);
+                SceneryGroundBlock.gameObject.transform.position = targetPos;
+                SceneryGroundBlock.gameObject.SetActive(true);
                 //Debug.LogError("Placing scenery");
             }
+
+            return SceneryGroundBlock;
+        }
+
+        /*
+         * Add actual scenery to a scenery ground block
+         * @param Block SceneryGroundBlock : the ground block that we're placing scenery onto
+         * @return Block : the scenery block that we just placed
+         */
+        protected Block SetSceneryOnGround(Block SceneryGroundBlock)
+        {
+            //get random index from SceneryBlockTypes list
+            int randomIndex = rando.Next(SceneryBlockTypes.Count); 
+            //get a random BlockType from SceneryBlockTypes using that index
+            BlockType bt = SceneryBlockTypes[randomIndex];
+            //get a sceneryBlock from it's corresponding pool using that random BlockType
+            Block SceneryBlock = GetBlockByType(bt);
+            //if there's an available SceneryBlock of type bt, add it to the scene
+            if (SceneryBlock != null && SceneryGroundBlock != null) {
+                Vector3 targetPos = SceneryGroundBlock.gameObject.transform.position;
+                SceneryBlock.gameObject.transform.SetParent(SceneryGroundBlock.gameObject.transform);
+                SceneryBlock.gameObject.transform.position = targetPos;
+                SceneryBlock.gameObject.SetActive(true);
+                Debug.LogError("We found a match for on top of the ground: " + bt);
+            }
+            return SceneryBlock;
         }
     }
 }

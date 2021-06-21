@@ -20,13 +20,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterScene_Tree 1
+  m_Name: TreeMatGreen
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ShaderKeywords: DR_RIM_ON _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY
     _UNITYSHADOWMODE_MULTIPLY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
@@ -77,13 +77,13 @@ Material:
     - _CelExtraEnabled: 0
     - _CelNumSteps: 3
     - _CelPrimaryMode: 1
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FlatRimEdgeSmoothness: 0.77
-    - _FlatRimLightAlign: 0.603
-    - _FlatRimSize: 0.273
+    - _FlatRimEdgeSmoothness: 0.824
+    - _FlatRimLightAlign: 0.679
+    - _FlatRimSize: 0.111
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.77
     - _Flatness: 1
@@ -98,8 +98,8 @@ Material:
     - _GradientSize: -1.46
     - _LightContribution: 0
     - _LightFalloffSize: 0.0001
-    - _LightmapDirectionPitch: 55
-    - _LightmapDirectionYaw: 114
+    - _LightmapDirectionPitch: 0
+    - _LightmapDirectionYaw: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OverrideLightmapDir: 0
@@ -125,16 +125,16 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.41774523, g: 0.3177287, b: 0.5660378, a: 1}
-    - _Color: {r: 0.41774526, g: 0.31772876, b: 0.5660378, a: 1}
-    - _ColorDim: {r: 0.3816612, g: 0.31617126, b: 0.46226418, a: 1}
+    - _BaseColor: {r: 0.48235294, g: 1, b: 0.46666667, a: 1}
+    - _Color: {r: 0.574527, g: 0.5157974, b: 0.6320754, a: 1}
+    - _ColorDim: {r: 0.2830254, g: 0.5754717, b: 0.2741634, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorDimExtra: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorGradient: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.41774523, g: 0.3177287, b: 0.5660378, a: 1}
+    - _FlatRimColor: {r: 0.4, g: 2, b: 0.36862746, a: 1}
     - _FlatSpecularColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
-    - _LightmapDirection: {r: 0.7483327, g: 0.57357645, b: -0.33317912, a: 0}
+    - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _UnityShadowColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}

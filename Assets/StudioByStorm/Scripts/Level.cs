@@ -34,6 +34,7 @@ namespace StudioByStorm.Scripts
         protected float LeftBounds;
         protected Vector3 targetRightPos;
         protected Vector3 targetLeftPos;
+        protected Queue<Block> QueuedBlocks = new Queue<Block>();
 
 
         protected bool bGroundObjectsSwitch = false;
@@ -88,6 +89,8 @@ namespace StudioByStorm.Scripts
             resetIceWall();
 
             bGroundObjectsSwitch = false;
+
+            DespawnQueuedBlocks();
         }
 
         void OnEnable()
@@ -100,7 +103,7 @@ namespace StudioByStorm.Scripts
 
             if (!bGroundObjectsSwitch && isInitialized && GameController.Instance != null && GameController.Instance.isGameActive) {
                 bGroundObjectsSwitch = true;
-                StartCoroutine(GameController.Instance.LevelController.GroundObjectsController.DetermineGroundObjects(BlocksWithinBounds));
+                StartCoroutine(GameController.Instance.LevelController.GroundObjectsController.DetermineGroundObjects(this));
             }
         }
 
@@ -212,6 +215,26 @@ namespace StudioByStorm.Scripts
                     //get point to world space
                     vecEnemySpawnPoints[j] = objEnemySpawnPoints[j].transform.TransformPoint(Vector3.zero);
                 }   
+            }
+        }
+
+        protected void DespawnQueuedBlocks()
+        {
+            if (QueuedBlocks.Count <= 0) {
+                return;
+            }
+
+            while(QueuedBlocks.Count > 0)
+            {
+                Block b = QueuedBlocks.Dequeue();
+                if (b != null) b.gameObject.SetActive(false);
+            }
+        }
+
+        public void EnqueueBlocks(List<Block> blocks)
+        {
+            for(int i = 0; i < blocks.Count; i++) {
+                QueuedBlocks.Enqueue(blocks[i]);
             }
         }
 

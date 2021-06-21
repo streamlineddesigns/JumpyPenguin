@@ -102,11 +102,16 @@ namespace StudioByStorm.Scripts
                         targetScale.z -= shrinkZStep;
                         transform.localScale = targetScale;
                     } else {
-                        gameObject.SetActive(false);
+                        Hide();
                     }
                     
                 }
             }
+        }
+
+        protected void Hide()
+        {
+            gameObject.SetActive(false);
         }
     }
 
