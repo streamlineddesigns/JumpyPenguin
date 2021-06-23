@@ -39,6 +39,8 @@ namespace StudioByStorm.Scripts
 
         protected bool bGroundObjectsSwitch = false;
 
+        protected bool bColliderSwitch = false;
+
         void Awake()
         {
 
@@ -132,7 +134,7 @@ namespace StudioByStorm.Scripts
             }
 
             //if the players y position + the threshold distance is higher than the level y position, enable the level parts
-            if (! GameController.Instance.isGameOver && GameController.Instance.Player.transform.position.y + thresholdDistance > gameObject.transform.position.y) {
+            if (! GameController.Instance.isGameOver && GameController.Instance.Player.transform.position.y + thresholdDistance > gameObject.transform.position.y && !bColliderSwitch) {
                 for (int i = 0; i < parts.Length; i++) {
                     parts[i].GetComponent<BoxCollider>().enabled = true;
                 }
@@ -148,11 +150,17 @@ namespace StudioByStorm.Scripts
                     GameController.Instance.LevelController.spawnLevelCheck();
                 }
 
+                //collider switch so the for loop doesn't run repeatedly in update
+                bColliderSwitch = true;
+
             //if the players y position + the threshold distance is lower than the level y position, disable the level parts
-            } else if (GameController.Instance.Player.transform.position.y + thresholdDistance < gameObject.transform.position.y) {
+            } else if (GameController.Instance.Player.transform.position.y + thresholdDistance < gameObject.transform.position.y && bColliderSwitch) {
                 for (int i = 0; i < parts.Length; i++) {
                     parts[i].GetComponent<BoxCollider>().enabled = false;
                 }
+
+                //collider switch so the for loop doesn't run repeatedly in update
+                bColliderSwitch = false;
             }
         }
 

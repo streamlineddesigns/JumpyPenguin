@@ -8,7 +8,7 @@ public class DestroyParticlesBelow : MonoBehaviour {
 	public float destroyBelow = 0f;
 
 	private void Start() {
-		Init();
+		//Init(); InvokeRepeating("DestroyParticles", 0, 0.1f) runs a for loop every .1sec causing performance issues.
 	}
 
 	private void Init() {
