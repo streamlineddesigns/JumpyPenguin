@@ -81,9 +81,9 @@ Material:
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FlatRimEdgeSmoothness: 0.943
-    - _FlatRimLightAlign: 0.93
-    - _FlatRimSize: 0.176
+    - _FlatRimEdgeSmoothness: 0.728
+    - _FlatRimLightAlign: 0.708
+    - _FlatRimSize: 0.164
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.77
     - _Flatness: 1

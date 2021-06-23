@@ -81,9 +81,9 @@ Material:
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FlatRimEdgeSmoothness: 0.824
-    - _FlatRimLightAlign: 0.679
-    - _FlatRimSize: 0.111
+    - _FlatRimEdgeSmoothness: 0.728
+    - _FlatRimLightAlign: 0.708
+    - _FlatRimSize: 0.164
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.77
     - _Flatness: 1
@@ -125,15 +125,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.48235294, g: 1, b: 0.46666667, a: 1}
+    - _BaseColor: {r: 0.6509804, g: 0.98039216, b: 0.7372549, a: 1}
     - _Color: {r: 0.574527, g: 0.5157974, b: 0.6320754, a: 1}
-    - _ColorDim: {r: 0.2830254, g: 0.5754717, b: 0.2741634, a: 1}
+    - _ColorDim: {r: 0.8537736, g: 1, b: 0.900835, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorDimExtra: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorGradient: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.4, g: 2, b: 0.36862746, a: 1}
+    - _FlatRimColor: {r: 0.1990477, g: 0.6698113, b: 0.41744316, a: 1}
     - _FlatSpecularColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
