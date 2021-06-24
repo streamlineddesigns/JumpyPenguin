@@ -59,7 +59,7 @@ namespace Lean.Transition.Method
 
 			public override void UpdateWithTarget(float progress)
 			{
-				Target.rotation = Quaternion.SlerpUnclamped(oldRotation, Rotation, Smooth(Ease, progress));
+				Target.rotation = Quaternion.LerpUnclamped(oldRotation, Rotation, Smooth(Ease, progress));
 			}
 
 			public static Stack<State> Pool = new Stack<State>(); public override void Despawn() { Pool.Push(this); }

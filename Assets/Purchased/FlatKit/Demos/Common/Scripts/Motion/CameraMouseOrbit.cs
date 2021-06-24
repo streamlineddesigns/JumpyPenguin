@@ -109,7 +109,7 @@ public class CameraMouseOrbit : MonoBehaviour {
             _y = ClampAngle(_y, yMinLimit, yMaxLimit);
         }
 
-        Quaternion rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(_y, _x, 0),
+        Quaternion rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(_y, _x, 0),
             Time.deltaTime * damping);
 
         if (allowZoom) {
