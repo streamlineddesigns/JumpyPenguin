@@ -52,7 +52,7 @@ namespace StudioByStorm.Scripts
         void Update()
         {
             if (! GameController.Instance.isGameActive && GameController.Instance.isGameOver) {
-                gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, Quaternion.Euler(0,180,0), 0.5f);
+                gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0,180,0), 0.5f);
                 if (gameObject.transform.rotation == Quaternion.Euler(0,180,0) && !isDead) {
                     Die();
                 }

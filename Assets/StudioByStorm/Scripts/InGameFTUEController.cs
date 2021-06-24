@@ -115,7 +115,7 @@ namespace StudioByStorm.Scripts
             //Second camera target animation
             if (!bCameraSecondTargetReached) {
                 if (Camera.transform.rotation != CameraInitialRotation) {
-                    Camera.transform.rotation = Quaternion.Slerp(Camera.transform.rotation, CameraInitialRotation, Time.deltaTime * 3.0f);
+                    Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, CameraInitialRotation, Time.deltaTime * 3.0f);
                 } else {
                     bCameraSecondTargetReached = true;
                     Vector3 LevelContainerTargetPos = GameController.Instance.LevelController.LevelContainer.transform.position;
@@ -167,7 +167,7 @@ namespace StudioByStorm.Scripts
                 var targetRotation = Quaternion.LookRotation(lookPos);
       
                 if (Camera.transform.rotation != targetRotation) {
-                    Camera.transform.rotation = Quaternion.Slerp(Camera.transform.rotation, targetRotation, Time.deltaTime * 3.0f);
+                    Camera.transform.rotation = Quaternion.Slerp(Camera.transform.rotation, targetRotation, Time.deltaTime * 2.0f);
                 } else {
                     bCameraFirstTargetReached = true;
                 }   

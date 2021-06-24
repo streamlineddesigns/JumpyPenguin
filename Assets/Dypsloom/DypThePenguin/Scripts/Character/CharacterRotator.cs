@@ -42,7 +42,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 Mathf.Atan2(charVelocity.x, charVelocity.y) 
                 * Mathf.Rad2Deg + m_Character.CharacterCamera.transform.eulerAngles.y;
             
-            Quaternion lookAt = Quaternion.Slerp(m_Character.transform.rotation,
+            Quaternion lookAt = Quaternion.Lerp(m_Character.transform.rotation,
                 Quaternion.Euler(0,targetRotation,0),
                 0.5f);
             

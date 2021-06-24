@@ -83,7 +83,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment
         
             m_ObjectTransform.localPosition = Vector3.Lerp(m_ObjectTransform.localPosition, targetPosition, Time.deltaTime * m_SmoothFactor);
 
-            //m_ObjectTransform.localRotation =  targetRotation;//Quaternion.Slerp(m_ObjectTransform.localRotation, targetRotation, Time.deltaTime * m_SmoothFactor);
+            //m_ObjectTransform.localRotation =  targetRotation;//Quaternion.Lerp(m_ObjectTransform.localRotation, targetRotation, Time.deltaTime * m_SmoothFactor);
             m_ObjectTransform.Rotate(m_RotationSpeed*Time.deltaTime);
         }
     }

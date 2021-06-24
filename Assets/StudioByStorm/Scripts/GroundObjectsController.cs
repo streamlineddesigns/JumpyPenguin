@@ -232,9 +232,9 @@ namespace StudioByStorm.Scripts
                 case BlockType.Dirt :
                     newBlockType = BlockType.Mud;
                     break;
-                case BlockType.Grass :
+                /*case BlockType.Grass :
                     newBlockType = BlockType.MovingGrass;
-                    break;
+                    break;*/
 
             }
 
