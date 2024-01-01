@@ -16,7 +16,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - SRPDEFAULTUNLIT
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -138,3 +139,4 @@ Material:
     - _FlatRimColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
     - _FlatSpecularColor: {r: 0.75294244, g: 0.111932434, b: 0.19806935, a: 1}
     - _UnityShadowColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
+  m_BuildTextureStacks: []

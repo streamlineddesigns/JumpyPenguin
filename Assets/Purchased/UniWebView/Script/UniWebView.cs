@@ -333,7 +333,7 @@ public class UniWebView: MonoBehaviour {
         if (isPortrait != newIsPortrait) {
             isPortrait = newIsPortrait;
             if (OnOrientationChanged != null) {
-                OnOrientationChanged(this, isPortrait ? ScreenOrientation.Portrait : ScreenOrientation.Landscape);
+                OnOrientationChanged(this, isPortrait ? ScreenOrientation.Portrait : ScreenOrientation.LandscapeLeft);
             }
             if (referenceRectTransform != null) {
                 UpdateFrame();

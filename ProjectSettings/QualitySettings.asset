@@ -45,11 +45,15 @@ QualitySettings:
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
     Android: 0
+    EmbeddedLinux: 0
+    GameCoreScarlett: 0
+    GameCoreXboxOne: 0
+    LinuxHeadlessSimulation: 0
     Lumin: 0
-    Nintendo 3DS: 0
     Nintendo Switch: 0
     PS4: 0
-    PSP2: 0
+    PS5: 0
+    Server: 0
     Stadia: 0
     Standalone: 0
     WebGL: 0

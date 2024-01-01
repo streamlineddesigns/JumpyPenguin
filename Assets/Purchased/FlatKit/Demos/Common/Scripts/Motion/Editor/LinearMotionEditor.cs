@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace FlatKit {
+namespace Dustyroom {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(LinearMotion))]
     public class LinearMotionEditor : UnityEditor.Editor {

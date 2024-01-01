@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace FlatKit {
+namespace Dustyroom {
     public class LinearMotion : MonoBehaviour {
         public enum TranslationMode {
             Off,

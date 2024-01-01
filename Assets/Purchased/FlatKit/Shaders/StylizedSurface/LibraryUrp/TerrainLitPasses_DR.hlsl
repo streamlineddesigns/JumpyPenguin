@@ -4,8 +4,13 @@
 #include "Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitPasses.hlsl"
 #include "LibraryUrp/StylizedInput.hlsl"
 
+#ifdef TERRAIN_GBUFFER
+FragmentOutput SplatmapFragment_DSTRM(Varyings IN)
+#else
 half4 SplatmapFragment_DSTRM(Varyings IN) : SV_TARGET
+#endif
 {
+    UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(IN);
 #ifdef _ALPHATEST_ON
     ClipHoles(IN.uvMainAndLM.xy);
 #endif
@@ -53,13 +58,49 @@ half4 SplatmapFragment_DSTRM(Varyings IN) : SV_TARGET
     half4 maskOcclusion = half4(masks[0].g, masks[1].g, masks[2].g, masks[3].g);
     defaultOcclusion = lerp(defaultOcclusion, maskOcclusion, hasMask);
     half occlusion = dot(splatControl, defaultOcclusion);
-
     half alpha = weight;
 #endif
 
     InputData inputData;
     InitializeInputData(IN, normalTS, inputData);
 
+    // If lightmap is enabled, flip the normal if the lightmap is flipped.
+    /*
+#if defined(LIGHTMAP_ON)
+    const half lightmapWorkaroundFlip = -1.0;
+    inputData.normalWS = lightmapWorkaroundFlip * inputData.normalWS;
+#endif
+    */
+
+#if VERSION_GREATER_EQUAL(12, 1)
+    SETUP_DEBUG_TEXTURE_DATA(inputData, IN.uvMainAndLM.xy, _BaseMap);
+#endif
+
+    #if defined(_DBUFFER)
+    half3 specular = half3(0.0h, 0.0h, 0.0h);
+    ApplyDecal(IN.clipPos,
+        albedo,
+        specular,
+        inputData.normalWS,
+        metallic,
+        occlusion,
+        smoothness);
+    #endif
+
+#ifdef TERRAIN_GBUFFER
+
+    BRDFData brdfData;
+    InitializeBRDFData(albedo, metallic, /* specular */ half3(0.0h, 0.0h, 0.0h), smoothness, alpha, brdfData);
+
+    half4 color;
+    color.rgb = GlobalIllumination(brdfData, inputData.bakedGI, occlusion, inputData.normalWS, inputData.viewDirectionWS);
+    color.a = alpha;
+
+    SplatmapFinalColor(color, inputData.fogCoord);
+
+    return BRDFDataToGbuffer(brdfData, inputData, smoothness, color.rgb);
+
+#else
     {
         _BaseColor.rgb *= albedo;
 
@@ -83,12 +124,25 @@ half4 SplatmapFragment_DSTRM(Varyings IN) : SV_TARGET
         _ColorGradient.rgb *= albedo;
         #endif
     }
-    
-    half4 color = UniversalFragment_DSTRM(inputData, albedo, /* emission */ half3(0, 0, 0), alpha);
+
+    SurfaceData surfaceData;
+    surfaceData.albedo = albedo;
+    surfaceData.alpha = alpha;
+    surfaceData.emission = 0;
+    surfaceData.specular = 0;
+    surfaceData.smoothness = smoothness;
+    surfaceData.metallic = metallic;
+    surfaceData.occlusion = occlusion;
+    surfaceData.normalTS = normalTS;
+    surfaceData.clearCoatMask = 0;
+    surfaceData.clearCoatSmoothness = 0;
+
+    half4 color = UniversalFragment_DSTRM(inputData, surfaceData, IN.uvMainAndLM.xy);
 
     SplatmapFinalColor(color, inputData.fogCoord);
 
     return half4(color.rgb, 1.0h);
+#endif
 }
 
 #endif  // FLATKIT_TERRAIN_LIT_PASSES_DR_INCLUDED

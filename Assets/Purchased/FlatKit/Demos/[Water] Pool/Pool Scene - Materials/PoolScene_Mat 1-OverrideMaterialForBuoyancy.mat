@@ -27,8 +27,9 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -123,6 +124,7 @@ Material:
     - _LightmapDirectionYaw: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _Opaque: 0
     - _OutlineDepthOffset: 0
     - _OutlineWidth: 0.01
     - _OverrideLightmapDir: 0
@@ -159,7 +161,7 @@ Material:
     - _WaveNoise: 0.25
     - _WaveSpeed: 0.5
     - _WorkflowMode: 1
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _Color: {r: 0.8207547, g: 0.615566, b: 0.615566, a: 1}
